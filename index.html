@@ -313,6 +313,16 @@
   .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
   .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
   .hero-content > *:nth-child(5) { animation-delay: 0.5s; }
+
+  /* Email links — no underline, no colour change, ever */
+  a[href^="mailto:"],
+  a[href^="mailto:"]:hover,
+  a[href^="mailto:"]:visited,
+  a[href^="mailto:"]:focus,
+  a[href^="mailto:"]:active {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
 </style>
 </head>
 <body>
@@ -803,11 +813,11 @@
       <span>Steady Construction of Steady Yield. Trading under JMAFG Limited. Fully Registered address: 20 Harcourt Street, Dublin 2, D02 H364.</span>
     </span>
     <span style="display:flex;align-items:center;gap:10px;">
-      <a href="javascript:void(0)" onclick="openPortal()" style="font-size:13px;color:var(--gray-400);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4601D'" onmouseout="this.style.color='var(--gray-400)'">Client Login</a>
+      <a id="footer-client-login" style="font-size:13px;color:var(--gray-400);text-decoration:none;cursor:pointer;">Client Login</a>
       <span style="color:var(--gray-200);">·</span>
-      <a href="javascript:void(0)" onclick="window.openAdminModal()" style="font-size:13px;color:var(--gray-200);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4601D'" onmouseout="this.style.color='var(--gray-200)'">Admin</a>
+      <a id="footer-admin-login" style="font-size:13px;color:var(--gray-200);text-decoration:none;cursor:pointer;">Admin</a>
       <span style="color:var(--gray-200);">·</span>
-      <a href="javascript:void(0)" id="contractor-login-btn" style="font-size:13px;color:var(--gray-200);text-decoration:none;transition:color 0.2s;">Contractor Login</a>
+      <a id="footer-contractor-login" style="font-size:13px;color:var(--gray-200);text-decoration:none;cursor:pointer;">Contractor Login</a>
     </span>
   </div>
 
@@ -2875,7 +2885,7 @@ window.renderAdminPayments = renderAdminPayments;
 <!-- CONTRACTOR LOGIN MODAL -->
 <div id="contractor-modal" style="display:none;position:fixed;inset:0;z-index:1002;background:rgba(28,28,28,0.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;">
   <div style="background:#fff;border-radius:20px;padding:48px 40px;width:100%;max-width:420px;margin:20px;box-shadow:0 24px 80px rgba(0,0,0,0.25);position:relative;">
-    <button onclick="closeContractorModal()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:22px;cursor:pointer;color:#9199a8;line-height:1;">&#10005;</button>
+    <button onclick="document.getElementById('contractor-modal').style.display='none';document.body.style.overflow='';" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:22px;cursor:pointer;color:#9199a8;line-height:1;">&#10005;</button>
     <div style="text-align:center;margin-bottom:32px;">
       <div style="width:52px;height:52px;background:linear-gradient(135deg,#1a1a2e,#2d2d4e);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:18px;color:#fff;font-weight:700;">SC</div>
       <h3 style="font-size:24px;color:#1a1a2e;margin-bottom:6px;font-family:'DM Serif Display',serif;">Contractor Portal</h3>
@@ -3251,74 +3261,67 @@ window.openContractorJobDetail = openContractorJobDetail;
 window.sendContractorMsg = sendContractorMsg;
 </script>
 
+
+
 <script>
-/* Bulletproof contractor modal */
-window.openContractorModal = function() {
-  var m = document.getElementById('contractor-modal');
-  if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-};
-window.closeContractorModal = function() {
-  var m = document.getElementById('contractor-modal');
-  if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
-};
+/* Wire footer login buttons — runs after full page loads */
 window.addEventListener('load', function() {
-  var pw = document.getElementById('contractor-password');
-  if (pw) pw.addEventListener('keydown', function(e){ if(e.key==='Enter') doContractorLogin(); });
+
+  /* Helper — hover colour for footer links */
+  function footerHover(el, hoverCol, baseCol) {
+    el.addEventListener('mouseover', function(){ el.style.color = hoverCol; });
+    el.addEventListener('mouseout',  function(){ el.style.color = baseCol; });
+  }
+
+  /* Client Login */
+  var clientBtn = document.getElementById('footer-client-login');
+  if (clientBtn) {
+    footerHover(clientBtn, '#D4601D', 'var(--gray-400)');
+    clientBtn.addEventListener('click', function() {
+      var m = document.getElementById('portal-modal');
+      if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    });
+  }
+
+  /* Admin */
+  var adminBtn = document.getElementById('footer-admin-login');
+  if (adminBtn) {
+    footerHover(adminBtn, '#D4601D', 'var(--gray-200)');
+    adminBtn.addEventListener('click', function() {
+      var m = document.getElementById('admin-modal');
+      if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    });
+  }
+
+  /* Contractor Login */
+  var contractorBtn = document.getElementById('footer-contractor-login');
+  if (contractorBtn) {
+    footerHover(contractorBtn, '#D4601D', 'var(--gray-200)');
+    contractorBtn.addEventListener('click', function() {
+      var m = document.getElementById('contractor-modal');
+      if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    });
+  }
+
+  /* Contractor modal close button */
+  var contractorClose = document.querySelector('#contractor-modal button');
+  if (contractorClose) {
+    contractorClose.addEventListener('click', function() {
+      var m = document.getElementById('contractor-modal');
+      if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
+    });
+  }
+
+  /* Contractor password — Enter key */
+  var contractorPw = document.getElementById('contractor-password');
+  if (contractorPw) {
+    contractorPw.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && typeof doContractorLogin === 'function') doContractorLogin();
+    });
+  }
+
 });
 </script>
 
-<script>
-(function() {
-  function showContractorLogin() {
-    var m = document.getElementById('contractor-modal');
-    if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-  }
-  function hideContractorLogin() {
-    var m = document.getElementById('contractor-modal');
-    if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
-  }
-  window.openContractorModal = showContractorLogin;
-  window.closeContractorModal = hideContractorLogin;
-  window.doContractorLogin = function() {
-    var email = (document.getElementById('contractor-email') || {}).value || '';
-    var pass  = (document.getElementById('contractor-password') || {}).value || '';
-    var accounts = [
-      { name:'Ciaran OBrien', email:'ciaran@example.ie', password:'contractor1234', trade:'Plumber', initials:'CO' },
-      { name:'Declan Byrne',  email:'declan@example.ie', password:'contractor1234', trade:'Electrician', initials:'DB' },
-      { name:'Padraig Doyle', email:'padraig@example.ie', password:'contractor1234', trade:'Carpenter', initials:'PD' }
-    ];
-    var account = accounts.find(function(a){ return a.email === email.trim().toLowerCase() && a.password === pass; });
-    var err = document.getElementById('contractor-login-error');
-    if (account) {
-      if (typeof currentContractor !== 'undefined') currentContractor = account;
-      window._currentContractor = account;
-      hideContractorLogin();
-      var dash = document.getElementById('contractor-dashboard');
-      if (dash) dash.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-      var welcome = document.getElementById('contractor-welcome');
-      if (welcome) welcome.textContent = 'Welcome, ' + account.name.split(' ')[0];
-      var avatar = document.getElementById('contractor-avatar');
-      if (avatar) avatar.textContent = account.initials;
-      if (typeof showContractorView === 'function') showContractorView('jobs');
-    } else {
-      if (err) { err.style.display = 'block'; err.textContent = 'Incorrect credentials. Try ciaran@example.ie / contractor1234'; }
-    }
-  };
-  // Wire up the button after DOM loads
-  document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.getElementById('contractor-login-btn');
-    if (btn) {
-      btn.addEventListener('click', showContractorLogin);
-      btn.addEventListener('mouseover', function(){ btn.style.color = '#D4601D'; });
-      btn.addEventListener('mouseout', function(){ btn.style.color = 'var(--gray-200)'; });
-    }
-    var pw = document.getElementById('contractor-password');
-    if (pw) pw.addEventListener('keydown', function(e){ if(e.key==='Enter') window.doContractorLogin(); });
-    var closeBtn = document.querySelector('#contractor-modal button');
-    if (closeBtn) closeBtn.addEventListener('click', hideContractorLogin);
-  });
-})();
-</script>
 </body>
 </html>
