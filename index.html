@@ -323,6 +323,19 @@
     color: inherit !important;
     text-decoration: none !important;
   }
+
+  /* Hard reset — emails are plain text, never links */
+  a[href^="mailto:"] { 
+    color: inherit !important; 
+    text-decoration: none !important; 
+    pointer-events: none; 
+    cursor: default;
+  }
+  /* Belt and braces for any CF obfuscated anchors */
+  a[href*="cdn-cgi"] {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
 </style>
 </head>
 <body>
@@ -339,7 +352,7 @@
     <li><a href="#contracts">Contracts</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Get a Quote</a>
+  <a href="javascript:void(0)" onclick="openPortal()" class="nav-cta" style="background:#1c1c1c;margin-right:8px;">Client Login</a><a href="#contact" class="nav-cta">Get a Quote</a>
   <div class="nav-hamburger" onclick="this.classList.toggle('open')">
   </div>
 </nav>
@@ -736,7 +749,7 @@
       </div>
     </div>
     <div style="text-align:center;">
-      <a href="https://tally.so/r/eqElbE" target="_blank" rel="noopener" style="display:inline-block;background:var(--gold);color:#fff;border:none;padding:16px 32px;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;font-family:'DM Sans',sans-serif;transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='var(--gold-light)';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='var(--gold)';this.style.transform='none'">Request Demo →</a>
+      <a href="#contact" style="display:inline-block;background:var(--gold);color:#fff;border:none;padding:16px 32px;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;font-family:'DM Sans',sans-serif;transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='var(--gold-light)';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='var(--gold)';this.style.transform='none'">Request Demo →</a>
       
     </div>
   </div>
@@ -755,7 +768,7 @@
         <p class="section-lead">Whether it's a quick repair, a full renovation, or an ongoing contract — our team is ready to help. Get in touch for a consultation and quote.</p>
         <div class="contact-detail"><div class="contact-detail-icon">📍</div> All across Dublin — serving all Dublin postcodes</div>
         <div class="contact-detail"><div class="contact-detail-icon">🕐</div> Available Monday – Friday, 9:00 AM – 6:00 PM</div>
-        <div class="contact-detail"><div class="contact-detail-icon">✉️</div> <a href="mailto:office@steadyconstruction.ie">office@steadyconstruction.ie</a></div>
+        <div class="contact-detail"><div class="contact-detail-icon">✉️</div> <span style="color:inherit;text-decoration:none;">office@steadyconstruction.ie</span></div>
 
       </div>
       <div class="contact-form" style="display:flex;flex-direction:column;justify-content:center;">
@@ -802,7 +815,7 @@
       <ul>
         <li style="font-size:13px;color:var(--gray-400);line-height:1.6;">20 Harcourt Street<br>Dublin 2, D02 H364<br>Ireland</li>
         <li style="margin-top:10px;"><a href="tel:+353000000000">+353 1 XXX XXXX</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#066960606f65634675726367627f6569687572747365726f6968286f63">office@steadyconstruction.ie</a></li>
+        <li><span style="color:inherit;text-decoration:none;">office@steadyconstruction.ie</span></li>
         <li style="margin-top:10px;font-size:13px;color:var(--gray-400);">Service Area: All across Dublin</li>
       </ul>
     </div>
@@ -810,14 +823,13 @@
   <div class="footer-bottom">
     <span>© 2026 Steady Construction. All rights reserved.</span>
     <span style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;">
-      <span>Steady Construction of Steady Yield. Trading under JMAFG Limited. Fully Registered address: 20 Harcourt Street, Dublin 2, D02 H364.</span>
+      <span>Steady Construction of Steady Yield. Trading under JMAFG Limited. Registered address 20 Harcourt Street, Dublin 2, D02 H364.</span>
     </span>
     <span style="display:flex;align-items:center;gap:10px;">
-      <a id="footer-client-login" style="font-size:13px;color:var(--gray-400);text-decoration:none;cursor:pointer;">Client Login</a>
+      <a href="javascript:void(0)" onclick="openPortal()" style="font-size:13px;color:var(--gray-400);text-decoration:none;cursor:pointer;">Client Login</a>
       <span style="color:var(--gray-200);">·</span>
-      <a id="footer-admin-login" style="font-size:13px;color:var(--gray-200);text-decoration:none;cursor:pointer;">Admin</a>
-      <span style="color:var(--gray-200);">·</span>
-      <a id="footer-contractor-login" style="font-size:13px;color:var(--gray-200);text-decoration:none;cursor:pointer;">Contractor Login</a>
+      <a href="javascript:void(0)" onclick="openAdminModal()" style="font-size:13px;color:var(--gray-200);text-decoration:none;cursor:pointer;">Admin</a>
+
     </span>
   </div>
 
@@ -844,7 +856,7 @@
       </div>
       <button onclick="doLogin()" style="background:var(--gold);color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:4px;transition:background 0.2s;" onmouseover="this.style.background='var(--gold-light)'" onmouseout="this.style.background='var(--gold)'">Sign In</button>
     </div>
-    <p style="text-align:center;margin-top:20px;font-size:13px;color:var(--gray-400);">Demo: <a href="mailto:demo@steadyconstruction.ie">demo@steadyconstruction.ie</a> / demo1234</p>
+    
   </div>
 </div>
 
@@ -1116,7 +1128,7 @@ function doLogin() {
     initPortal();
   } else {
     err.style.display = 'block';
-    err.textContent = 'Incorrect email or password. Try demo@steadyconstruction.ie / demo1234';
+    err.textContent = 'Incorrect email or password. Please check your details and try again.';
   }
 }
 function logoutPortal() {
@@ -1872,7 +1884,7 @@ window.submitNewRequest = submitNewRequest;
       </div>
       <button onclick="window.doAdminLogin()" style="background:#D4601D;color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:4px;transition:background 0.2s;" onmouseover="this.style.background='#e87a3a'" onmouseout="this.style.background='#D4601D'">Sign In →</button>
     </div>
-    <p style="text-align:center;margin-top:20px;font-size:13px;color:rgba(255,255,255,0.25);">Demo: <a href="mailto:admin@steadyconstruction.ie">admin@steadyconstruction.ie</a> / admin1234</p>
+    
   </div>
 </div>
 
@@ -2184,7 +2196,7 @@ function doAdminLogin() {
     document.body.style.overflow = 'hidden';
     initAdminDashboard();
   } else {
-    if (err) { err.style.display = 'block'; err.textContent = 'Invalid credentials. Try admin@steadyconstruction.ie / admin1234'; }
+    if (err) { err.style.display = 'block'; err.textContent = 'Invalid credentials. Please check your details and try again.'; }
   }
 }
 function logoutAdmin() {
@@ -2878,450 +2890,6 @@ window.renderAdminPayments = renderAdminPayments;
 
 
 
-<!-- ══════════════════════════════════════════════════════════
-     CONTRACTOR PORTAL — Login Modal + Dashboard
-     ══════════════════════════════════════════════════════════ -->
-
-<!-- CONTRACTOR LOGIN MODAL -->
-<div id="contractor-modal" style="display:none;position:fixed;inset:0;z-index:1002;background:rgba(28,28,28,0.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;">
-  <div style="background:#fff;border-radius:20px;padding:48px 40px;width:100%;max-width:420px;margin:20px;box-shadow:0 24px 80px rgba(0,0,0,0.25);position:relative;">
-    <button onclick="document.getElementById('contractor-modal').style.display='none';document.body.style.overflow='';" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:22px;cursor:pointer;color:#9199a8;line-height:1;">&#10005;</button>
-    <div style="text-align:center;margin-bottom:32px;">
-      <div style="width:52px;height:52px;background:linear-gradient(135deg,#1a1a2e,#2d2d4e);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:18px;color:#fff;font-weight:700;">SC</div>
-      <h3 style="font-size:24px;color:#1a1a2e;margin-bottom:6px;font-family:'DM Serif Display',serif;">Contractor Portal</h3>
-      <p style="font-size:14px;color:#9199a8;">Sign in to view your assigned jobs</p>
-    </div>
-    <div id="contractor-login-error" style="display:none;background:#fff3ec;border:1px solid #D4601D;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:13px;color:#D4601D;"></div>
-    <div style="display:flex;flex-direction:column;gap:14px;">
-      <div>
-        <label style="font-size:13px;font-weight:600;color:#4a5264;display:block;margin-bottom:6px;">Email Address</label>
-        <input id="contractor-email" type="email" placeholder="you@example.ie" style="width:100%;border:1px solid #e5e1dd;border-radius:10px;padding:12px 14px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#f7f8fa;box-sizing:border-box;" onfocus="this.style.borderColor='#D4601D'" onblur="this.style.borderColor='#e5e1dd'">
-      </div>
-      <div>
-        <label style="font-size:13px;font-weight:600;color:#4a5264;display:block;margin-bottom:6px;">Password</label>
-        <input id="contractor-password" type="password" placeholder="••••••••" style="width:100%;border:1px solid #e5e1dd;border-radius:10px;padding:12px 14px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#f7f8fa;box-sizing:border-box;" onfocus="this.style.borderColor='#D4601D'" onblur="this.style.borderColor='#e5e1dd'">
-      </div>
-      <button onclick="doContractorLogin()" style="background:#1a1a2e;color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:4px;">Sign In</button>
-    </div>
-    <p style="text-align:center;margin-top:20px;font-size:13px;color:#9199a8;">Demo: <a href="mailto:ciaran@example.ie">ciaran@example.ie</a> / contractor1234</p>
-  </div>
-</div>
-
-<!-- CONTRACTOR DASHBOARD -->
-<div id="contractor-dashboard" style="display:none;position:fixed;inset:0;z-index:1001;background:#f2f0ee;overflow-y:auto;font-family:'DM Sans',sans-serif;">
-
-  <!-- Top nav -->
-  <div style="background:#1a1a2e;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.2);">
-    <div style="display:flex;align-items:center;gap:10px;">
-      <div style="width:32px;height:32px;background:linear-gradient(135deg,#D4601D,#e87a3a);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;">SC</div>
-      <div>
-        <div style="font-size:13px;font-weight:700;color:#fff;line-height:1.2;">Steady Construction</div>
-        <div style="font-size:10px;color:rgba(255,255,255,0.4);">Contractor Portal</div>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:16px;">
-      <div style="display:flex;gap:4px;background:rgba(255,255,255,0.08);border-radius:10px;padding:4px;">
-        <button onclick="showContractorView('jobs')" id="cnav-jobs" style="padding:7px 16px;border:none;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;background:#D4601D;color:#fff;font-family:'DM Sans',sans-serif;">My Jobs</button>
-        <button onclick="showContractorView('completed')" id="cnav-completed" style="padding:7px 16px;border:none;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;background:transparent;color:rgba(255,255,255,0.55);font-family:'DM Sans',sans-serif;">Completed</button>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px;cursor:pointer;" onclick="logoutContractor()">
-        <div id="contractor-avatar" style="width:32px;height:32px;background:#D4601D;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;">CO</div>
-        <span style="font-size:13px;color:rgba(255,255,255,0.4);">Sign Out</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Jobs view -->
-  <div id="cview-jobs" style="max-width:900px;margin:0 auto;padding:36px 24px;">
-    <div style="margin-bottom:24px;">
-      <h2 id="contractor-welcome" style="font-size:24px;font-family:'DM Serif Display',serif;color:#1a1a2e;margin-bottom:4px;">Your Assigned Jobs</h2>
-      <p style="font-size:14px;color:#9199a8;">Active jobs assigned to you — tap any job for full details and to update the team.</p>
-    </div>
-    <div id="contractor-job-list"></div>
-  </div>
-
-  <!-- Completed view -->
-  <div id="cview-completed" style="display:none;max-width:900px;margin:0 auto;padding:36px 24px;">
-    <h2 style="font-size:24px;font-family:'DM Serif Display',serif;color:#1a1a2e;margin-bottom:20px;">Completed Jobs</h2>
-    <div id="contractor-completed-list"></div>
-  </div>
-
-  <!-- Job detail (shown in overlay within dashboard) -->
-  <div id="cview-job-detail" style="display:none;max-width:900px;margin:0 auto;padding:36px 24px;">
-    <div id="contractor-job-detail-content"></div>
-  </div>
-
-</div>
-
-<script>
-/* ============================================================
-   STEADY CONSTRUCTION — CONTRACTOR PORTAL
-   - See assigned jobs with full address and issue details
-   - Chat with admin on each job
-   - NO cost/price info visible
-   - Admin marks job as done; updates status here
-   ============================================================ */
-
-var contractorAccounts = [
-  { name:'Ciaran OBrien', email:'ciaran@example.ie', password:'contractor1234', trade:'Plumber', initials:'CO' },
-  { name:'Declan Byrne',  email:'declan@example.ie', password:'contractor1234', trade:'Electrician', initials:'DB' },
-  { name:'Padraig Doyle', email:'padraig@example.ie', password:'contractor1234', trade:'Carpenter', initials:'PD' }
-];
-
-var currentContractor = null;
-
-/* ── AUTH ── */
-function openContractorModal() {
-  document.getElementById('contractor-modal').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeContractorModal() {
-  document.getElementById('contractor-modal').style.display = 'none';
-  document.body.style.overflow = '';
-}
-function doContractorLogin() {
-  var email = (document.getElementById('contractor-email').value || '').trim().toLowerCase();
-  var pass = document.getElementById('contractor-password').value || '';
-  var err = document.getElementById('contractor-login-error');
-  var account = contractorAccounts.find(function(a){ return a.email === email && a.password === pass; });
-  if (account) {
-    currentContractor = account;
-    closeContractorModal();
-    document.getElementById('contractor-dashboard').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    var welcome = document.getElementById('contractor-welcome');
-    if (welcome) welcome.textContent = 'Welcome, ' + account.name.split(' ')[0];
-    var avatar = document.getElementById('contractor-avatar');
-    if (avatar) avatar.textContent = account.initials;
-    showContractorView('jobs');
-  } else {
-    err.style.display = 'block';
-    err.textContent = 'Incorrect credentials. Try ciaran@example.ie / contractor1234';
-  }
-}
-function logoutContractor() {
-  currentContractor = null;
-  document.getElementById('contractor-dashboard').style.display = 'none';
-  document.body.style.overflow = '';
-}
-window.addEventListener('load', function() {
-  var pw = document.getElementById('contractor-password');
-  if (pw) pw.addEventListener('keydown', function(e){ if(e.key==='Enter') doContractorLogin(); });
-});
-
-/* ── NAV ── */
-function showContractorView(view) {
-  ['jobs','completed','job-detail'].forEach(function(v) {
-    var el = document.getElementById('cview-' + v);
-    var btn = document.getElementById('cnav-' + v);
-    if (el) el.style.display = 'none';
-    if (btn) { btn.style.background = 'transparent'; btn.style.color = 'rgba(255,255,255,0.55)'; }
-  });
-  var active = document.getElementById('cview-' + view);
-  var activeBtn = document.getElementById('cnav-' + view);
-  if (active) active.style.display = 'block';
-  if (activeBtn) { activeBtn.style.background = '#D4601D'; activeBtn.style.color = '#fff'; }
-  if (view === 'jobs') renderContractorJobs();
-  if (view === 'completed') renderContractorCompleted();
-}
-
-/* ── HELPERS ── */
-function cEl(tag, css, txt) {
-  var e = document.createElement(tag);
-  if (css) e.style.cssText = css;
-  if (txt !== undefined) e.textContent = String(txt);
-  return e;
-}
-function cPill(text, bg, col) {
-  return cEl('span', 'font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;background:'+bg+';color:'+col+';display:inline-block;white-space:nowrap;', text);
-}
-
-/* ── GET CONTRACTOR'S TICKETS ── */
-function getMyTickets(completedOnly) {
-  if (!currentContractor || typeof adminTickets === 'undefined') return [];
-  return adminTickets.filter(function(t) {
-    var isMyTrade = t.contractor && t.contractor.toLowerCase().includes(currentContractor.trade.toLowerCase());
-    var isMyName  = t.contractor && t.contractor.toLowerCase().includes(currentContractor.name.split(' ')[0].toLowerCase());
-    var isMe = isMyTrade || isMyName;
-    if (completedOnly) return isMe && t.status === 'Completed';
-    return isMe && t.status !== 'Completed' && t.status !== 'Closed';
-  });
-}
-
-/* ── JOB LIST ── */
-function renderContractorJobs() {
-  var container = document.getElementById('contractor-job-list');
-  if (!container) return;
-  container.innerHTML = '';
-  var jobs = getMyTickets(false);
-  if (!jobs.length) {
-    container.appendChild(cEl('div', 'background:#fff;border-radius:14px;padding:40px;text-align:center;color:#9199a8;border:1px solid #e5e1dd;', 'No active jobs assigned to you right now.'));
-    return;
-  }
-  jobs.forEach(function(t) {
-    var stMap = { 'Scheduled':'#eff6ff|#2563eb', 'In Progress':'#fff3ec|#D4601D', 'Assigned':'#f5f3ff|#7c3aed', 'Pending':'#fafafa|#9199a8' };
-    var stParts = (stMap[t.status] || '#fafafa|#9199a8').split('|');
-    var card = cEl('div', 'background:#fff;border-radius:14px;padding:22px 24px;border:1px solid #e5e1dd;margin-bottom:12px;cursor:pointer;');
-    card.addEventListener('mouseover', function(){ card.style.borderColor='#D4601D'; card.style.boxShadow='0 4px 20px rgba(212,96,29,0.08)'; });
-    card.addEventListener('mouseout',  function(){ card.style.borderColor='#e5e1dd'; card.style.boxShadow='none'; });
-    card.addEventListener('click', function(){ openContractorJobDetail(t.ref); });
-
-    var top = cEl('div', 'display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;');
-    var tl = cEl('div', '');
-    var pills = cEl('div', 'display:flex;gap:8px;margin-bottom:6px;flex-wrap:wrap;');
-    pills.appendChild(cEl('span', 'font-size:12px;font-weight:700;color:#9199a8;', t.ref));
-    pills.appendChild(cPill(t.status, stParts[0], stParts[1]));
-    if (t.priority === 'Urgent') pills.appendChild(cPill('URGENT', '#fef2f2', '#dc2626'));
-    tl.appendChild(pills);
-    tl.appendChild(cEl('div', 'font-size:16px;font-weight:700;color:#1a1a2e;margin-bottom:4px;', t.type + ' — ' + t.address));
-    tl.appendChild(cEl('div', 'font-size:13px;color:#9199a8;', t.scheduled ? 'Scheduled: ' + t.scheduled : 'Schedule to be confirmed'));
-    top.appendChild(tl);
-    var arrow = cEl('div', 'font-size:20px;color:#D4601D;font-weight:700;margin-top:4px;', '\u203a');
-    top.appendChild(arrow);
-    card.appendChild(top);
-
-    /* Progress bar */
-    var stageMap = {'Pending':0,'Assigned':1,'Scheduled':2,'In Progress':3,'Completed':4};
-    var prog = stageMap[t.status] || 0;
-    var barWrap = cEl('div', 'background:#f0f1f3;border-radius:4px;height:4px;overflow:hidden;');
-    barWrap.appendChild(cEl('div', 'width:'+Math.round(prog/4*100)+'%;height:100%;background:#D4601D;border-radius:4px;'));
-    card.appendChild(barWrap);
-    container.appendChild(card);
-  });
-}
-
-/* ── COMPLETED JOBS ── */
-function renderContractorCompleted() {
-  var container = document.getElementById('contractor-completed-list');
-  if (!container) return;
-  container.innerHTML = '';
-  var jobs = getMyTickets(true);
-  if (!jobs.length) {
-    container.appendChild(cEl('div', 'background:#fff;border-radius:14px;padding:40px;text-align:center;color:#9199a8;border:1px solid #e5e1dd;', 'No completed jobs yet.'));
-    return;
-  }
-  jobs.forEach(function(t) {
-    var card = cEl('div', 'background:#fff;border-radius:14px;padding:20px 24px;border:1px solid #e5e1dd;margin-bottom:10px;cursor:pointer;');
-    card.addEventListener('mouseover', function(){ card.style.borderColor='#16a34a'; });
-    card.addEventListener('mouseout',  function(){ card.style.borderColor='#e5e1dd'; });
-    card.addEventListener('click', function(){ openContractorJobDetail(t.ref); });
-    var pills = cEl('div', 'display:flex;gap:8px;margin-bottom:6px;');
-    pills.appendChild(cEl('span', 'font-size:11px;font-weight:700;color:#9199a8;', t.ref));
-    pills.appendChild(cPill('Completed', '#f0fdf4', '#16a34a'));
-    card.appendChild(pills);
-    card.appendChild(cEl('div', 'font-size:15px;font-weight:600;color:#1a1a2e;margin-bottom:2px;', t.type + ' — ' + t.address));
-    card.appendChild(cEl('div', 'font-size:13px;color:#9199a8;', 'Completed: ' + t.scheduled));
-    container.appendChild(card);
-  });
-}
-
-/* ── JOB DETAIL ── */
-function openContractorJobDetail(ref) {
-  var t = typeof adminTickets !== 'undefined' ? adminTickets.find(function(x){ return x.ref===ref; }) : null;
-  if (!t) return;
-
-  /* Hide other views, show detail */
-  ['cview-jobs','cview-completed'].forEach(function(id){ var el=document.getElementById(id); if(el) el.style.display='none'; });
-  var detail = document.getElementById('cview-job-detail');
-  if (!detail) return;
-  detail.style.display = 'block';
-
-  var content = document.getElementById('contractor-job-detail-content');
-  if (!content) return;
-  content.innerHTML = '';
-
-  /* Back */
-  var back = cEl('button', 'background:none;border:none;cursor:pointer;font-size:13px;color:#9199a8;margin-bottom:20px;padding:0;font-family:"DM Sans",sans-serif;', '\u2190 Back to Jobs');
-  back.addEventListener('click', function(){
-    detail.style.display = 'none';
-    showContractorView(t.status === 'Completed' ? 'completed' : 'jobs');
-  });
-  content.appendChild(back);
-
-  /* Header */
-  var hdr = cEl('div', 'display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:24px;');
-  var hl = cEl('div', '');
-  hl.appendChild(cEl('div', 'font-size:12px;font-weight:700;color:#9199a8;margin-bottom:4px;', t.ref + ' · ' + t.type));
-  hl.appendChild(cEl('h2', 'font-size:22px;font-family:"DM Serif Display",serif;color:#1a1a2e;margin-bottom:4px;', t.type + ' — ' + t.address));
-  hl.appendChild(cEl('div', 'font-size:13px;color:#9199a8;', t.priority + ' priority'));
-  var stMap2 = {'Completed':'#f0fdf4|#16a34a','In Progress':'#fff3ec|#D4601D','Scheduled':'#eff6ff|#2563eb'};
-  var sp = (stMap2[t.status]||'#fafafa|#9199a8').split('|');
-  hdr.appendChild(hl);
-  hdr.appendChild(cPill(t.status, sp[0], sp[1]));
-  content.appendChild(hdr);
-
-  /* Job details grid — NO price/cost info */
-  var grid = cEl('div', 'display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px;');
-  var details = [
-    ['Full Address', t.address],
-    ['Service Type', t.type],
-    ['Scheduled', t.scheduled || 'To be confirmed'],
-    ['Priority', t.priority],
-    ['Occupancy', t.occupancy || 'Not specified'],
-    ['Access Instructions', t.accessInstructions || 'See notes below']
-  ];
-  details.forEach(function(d) {
-    var cell = cEl('div', 'background:#fff;border-radius:12px;padding:14px 16px;border:1px solid #e5e1dd;');
-    cell.appendChild(cEl('div', 'font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9199a8;margin-bottom:4px;', d[0]));
-    cell.appendChild(cEl('div', 'font-size:13px;font-weight:600;color:#1a1a2e;line-height:1.4;', d[1]));
-    grid.appendChild(cell);
-  });
-  content.appendChild(grid);
-
-  /* Issue description */
-  var descBox = cEl('div', 'background:#fff;border-radius:14px;padding:20px 24px;border:1px solid #e5e1dd;margin-bottom:24px;');
-  descBox.appendChild(cEl('div', 'font-size:13px;font-weight:700;color:#1a1a2e;margin-bottom:8px;', 'Issue Description'));
-  descBox.appendChild(cEl('div', 'font-size:13px;color:#4a5264;line-height:1.6;', t.desc));
-  content.appendChild(descBox);
-
-  /* Chat with admin — contractor side */
-  var chatBox = cEl('div', 'background:#fff;border-radius:14px;border:1px solid #e5e1dd;overflow:hidden;margin-bottom:24px;');
-  var chatHdr = cEl('div', 'padding:16px 20px;border-bottom:1px solid #f0f1f3;');
-  chatHdr.appendChild(cEl('div', 'font-size:14px;font-weight:700;color:#1a1a2e;', 'Chat with Steady Construction'));
-  chatHdr.appendChild(cEl('div', 'font-size:12px;color:#9199a8;margin-top:2px;', 'Send updates, photos and questions to the team'));
-  chatBox.appendChild(chatHdr);
-
-  var thread = cEl('div', 'padding:16px 20px;background:#f7f8fa;min-height:80px;max-height:300px;overflow-y:auto;');
-  thread.id = 'contractor-chat-' + ref;
-
-  /* Show admin<->contractor messages from contractorMessages array on ticket */
-  var cMsgs = t.contractorMessages || [];
-  if (!cMsgs.length) {
-    thread.appendChild(cEl('div', 'text-align:center;color:#9199a8;font-size:13px;padding:20px 0;', 'No messages yet. Send an update to the team.'));
-  } else {
-    cMsgs.forEach(function(m) {
-      var isMe = m.from === 'contractor';
-      var row = cEl('div', 'display:flex;'+(isMe?'justify-content:flex-end;':'')+'margin-bottom:10px;');
-      var bubble = cEl('div', 'max-width:72%;background:'+(isMe?'#1a1a2e':'#fff')+';color:'+(isMe?'#fff':'#1a1a2e')+';border-radius:'+(isMe?'14px 14px 4px 14px':'14px 14px 14px 4px')+';padding:10px 14px;font-size:13px;line-height:1.5;border:'+(isMe?'none':'1px solid #e5e1dd')+';');
-      bubble.appendChild(cEl('div', '', m.text));
-      bubble.appendChild(cEl('div', 'font-size:11px;'+(isMe?'color:rgba(255,255,255,0.5)':'color:#9199a8')+';margin-top:5px;', (m.name||m.from)+' - '+m.time));
-      row.appendChild(bubble); thread.appendChild(row);
-    });
-  }
-  chatBox.appendChild(thread);
-
-  var chatFoot = cEl('div', 'padding:14px 16px;border-top:1px solid #f0f1f3;background:#fff;display:flex;gap:10px;');
-  var msgInput = document.createElement('input');
-  msgInput.type = 'text'; msgInput.id = 'contractor-msg-input-'+ref;
-  msgInput.placeholder = 'Send an update to the team...';
-  msgInput.style.cssText = 'flex:1;border:1px solid #e5e1dd;border-radius:8px;padding:10px 14px;font-size:13px;font-family:"DM Sans",sans-serif;outline:none;';
-  msgInput.addEventListener('focus', function(){ msgInput.style.borderColor='#D4601D'; });
-  msgInput.addEventListener('blur',  function(){ msgInput.style.borderColor='#e5e1dd'; });
-  msgInput.addEventListener('keydown', function(e){ if(e.key==='Enter') sendContractorMsg(ref); });
-  var sendBtn = cEl('button', 'background:#1a1a2e;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:"DM Sans",sans-serif;white-space:nowrap;', 'Send');
-  sendBtn.addEventListener('click', function(){ sendContractorMsg(ref); });
-  chatFoot.appendChild(msgInput); chatFoot.appendChild(sendBtn);
-  chatBox.appendChild(chatFoot);
-  content.appendChild(chatBox);
-
-  /* Completed notice — no mark-as-done button (admin only) */
-  if (t.status === 'Completed') {
-    var doneBox = cEl('div', 'background:#f0fdf4;border:1.5px solid #16a34a;border-radius:14px;padding:18px 20px;text-align:center;');
-    doneBox.appendChild(cEl('div', 'font-size:14px;font-weight:700;color:#16a34a;margin-bottom:4px;', 'Job Marked as Completed'));
-    doneBox.appendChild(cEl('div', 'font-size:13px;color:#9199a8;', 'This job has been signed off by the Steady Construction team.'));
-    content.appendChild(doneBox);
-  }
-
-  setTimeout(function(){ thread.scrollTop = thread.scrollHeight; }, 50);
-}
-
-/* ── CONTRACTOR CHAT ── */
-function sendContractorMsg(ref) {
-  if (!currentContractor) return;
-  var t = typeof adminTickets !== 'undefined' ? adminTickets.find(function(x){ return x.ref===ref; }) : null;
-  if (!t) return;
-  var inp = document.getElementById('contractor-msg-input-' + ref);
-  if (!inp) return;
-  var msg = inp.value.trim();
-  if (!msg) return;
-  if (!t.contractorMessages) t.contractorMessages = [];
-  var now = new Date();
-  var ts = now.getHours()+':'+String(now.getMinutes()).padStart(2,'0');
-  var msgObj = { from:'contractor', text:msg, time:ts, name: currentContractor.name };
-  t.contractorMessages.push(msgObj);
-  inp.value = '';
-  var thread = document.getElementById('contractor-chat-' + ref);
-  if (thread) {
-    var row = cEl('div', 'display:flex;justify-content:flex-end;margin-bottom:10px;');
-    var bubble = cEl('div', 'max-width:72%;background:#1a1a2e;color:#fff;border-radius:14px 14px 4px 14px;padding:10px 14px;font-size:13px;line-height:1.5;');
-    bubble.appendChild(cEl('div', '', msg));
-    bubble.appendChild(cEl('div', 'font-size:11px;color:rgba(255,255,255,0.5);margin-top:5px;', currentContractor.name + ' - Just now'));
-    row.appendChild(bubble); thread.appendChild(row);
-    thread.scrollTop = thread.scrollHeight;
-  }
-}
-
-/* ── EXPOSE GLOBALS ── */
-window.openContractorModal = openContractorModal;
-window.closeContractorModal = closeContractorModal;
-window.doContractorLogin = doContractorLogin;
-window.logoutContractor = logoutContractor;
-window.showContractorView = showContractorView;
-window.openContractorJobDetail = openContractorJobDetail;
-window.sendContractorMsg = sendContractorMsg;
-</script>
-
-
-
-<script>
-/* Wire footer login buttons — runs after full page loads */
-window.addEventListener('load', function() {
-
-  /* Helper — hover colour for footer links */
-  function footerHover(el, hoverCol, baseCol) {
-    el.addEventListener('mouseover', function(){ el.style.color = hoverCol; });
-    el.addEventListener('mouseout',  function(){ el.style.color = baseCol; });
-  }
-
-  /* Client Login */
-  var clientBtn = document.getElementById('footer-client-login');
-  if (clientBtn) {
-    footerHover(clientBtn, '#D4601D', 'var(--gray-400)');
-    clientBtn.addEventListener('click', function() {
-      var m = document.getElementById('portal-modal');
-      if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    });
-  }
-
-  /* Admin */
-  var adminBtn = document.getElementById('footer-admin-login');
-  if (adminBtn) {
-    footerHover(adminBtn, '#D4601D', 'var(--gray-200)');
-    adminBtn.addEventListener('click', function() {
-      var m = document.getElementById('admin-modal');
-      if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    });
-  }
-
-  /* Contractor Login */
-  var contractorBtn = document.getElementById('footer-contractor-login');
-  if (contractorBtn) {
-    footerHover(contractorBtn, '#D4601D', 'var(--gray-200)');
-    contractorBtn.addEventListener('click', function() {
-      var m = document.getElementById('contractor-modal');
-      if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    });
-  }
-
-  /* Contractor modal close button */
-  var contractorClose = document.querySelector('#contractor-modal button');
-  if (contractorClose) {
-    contractorClose.addEventListener('click', function() {
-      var m = document.getElementById('contractor-modal');
-      if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
-    });
-  }
-
-  /* Contractor password — Enter key */
-  var contractorPw = document.getElementById('contractor-password');
-  if (contractorPw) {
-    contractorPw.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' && typeof doContractorLogin === 'function') doContractorLogin();
-    });
-  }
-
-});
-</script>
 
 </body>
 </html>
