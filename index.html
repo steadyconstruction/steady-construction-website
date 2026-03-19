@@ -325,11 +325,11 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#residential">Residential</a></li>
-    <li><a href="#commercial">Commercial</a></li>
+    <li><a href="#residential" onclick="setTimeout(function(){switchTab('commercial-tab');},100)">Commercial</a></li>
     <li><a href="#contracts">Contracts</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Get a Quote</a>
+  <a href="https://tally.so/r/eqElbE" target="_blank" rel="noopener" class="nav-cta">Get a Quote</a>
   <div class="nav-hamburger" onclick="this.classList.toggle('open')">
   </div>
 </nav>
@@ -347,7 +347,7 @@
     <h1>All Your Property Needs.<br><span class="accent">One Trusted Team.</span></h1>
     <p class="hero-sub">From minor repairs to full-scale construction projects, our experienced in-house team handles every aspect of your property with professionalism, efficiency, and attention to detail.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Request a Free Quote</a>
+      <a href="https://tally.so/r/eqElbE" target="_blank" rel="noopener" class="btn-primary">Request a Free Quote</a>
       <a href="#services" class="btn-ghost">View Our Services</a>
     </div>
     <div class="hero-stats">
@@ -726,956 +726,11 @@
       </div>
     </div>
     <div style="text-align:center;">
-      <button onclick="openPortal()" style="background:var(--gold);color:#fff;border:none;padding:16px 36px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;box-shadow:0 4px 16px rgba(212,96,29,0.35);transition:all 0.2s;" onmouseover="this.style.background='var(--gold-light)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--gold)';this.style.transform='none'">View Portal Demo →</button>
-      <p style="margin-top:12px;font-size:13px;color:var(--gray-400);">Try the demo with: email <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9df9f8f0f2ddeee9f8fcf9e4fef2f3eee9efe8fee9f4f2f3b3f4f8">[email&#160;protected]</a></strong> / password <strong>demo1234</strong></p>
+      <a href="https://tally.so/r/eqElbE" target="_blank" rel="noopener" style="display:inline-block;background:var(--gold);color:#fff;border:none;padding:16px 32px;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;font-family:'DM Sans',sans-serif;transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background='var(--gold-light)';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='var(--gold)';this.style.transform='none'">Request Demo →</a>
+      
     </div>
   </div>
 </section>
-
-
-<!-- PORTAL VIDEO WALKTHROUGH -->
-<section id="portal-video-section" style="background:#0f0f0f;padding:72px 6%;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;"></div>
-  <div style="position:absolute;top:-80px;right:-60px;width:420px;height:420px;background:radial-gradient(circle,rgba(212,96,29,0.1) 0%,transparent 68%);pointer-events:none;"></div>
-  <div style="max-width:1100px;margin:0 auto;position:relative;z-index:2;">
-    <div style="text-align:center;max-width:560px;margin:0 auto 36px;">
-      <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#D4601D;margin-bottom:10px;">Portal Walkthrough</div>
-      <h2 style="font-size:clamp(22px,3vw,38px);color:#fff;margin-bottom:10px;font-family:'DM Serif Display',serif;line-height:1.2;">See the portal <em style="color:#D4601D;">in action</em></h2>
-      <p style="font-size:13px;color:rgba(255,255,255,0.38);line-height:1.7;font-weight:300;">A complete walkthrough — login, dashboard, raising a ticket, tracking progress, messaging and payments.</p>
-    </div>
-    <div style="max-width:860px;margin:0 auto;">
-      <div style="background:#050505;border-radius:14px;overflow:hidden;box-shadow:0 28px 80px rgba(0,0,0,0.8);border:1px solid rgba(255,255,255,0.06);">
-        <div style="background:#141414;padding:9px 14px;display:flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,0.05);">
-          <div style="width:9px;height:9px;border-radius:50%;background:#ff5f57;"></div>
-          <div style="width:9px;height:9px;border-radius:50%;background:#febc2e;"></div>
-          <div style="width:9px;height:9px;border-radius:50%;background:#28c840;"></div>
-          <div style="flex:1;background:rgba(255,255,255,0.05);border-radius:4px;padding:4px 10px;margin:0 8px;"><span style="font-size:10px;color:rgba(255,255,255,0.2);font-family:monospace;">steadyconstruction.ie/portal</span></div>
-        </div>
-        <div style="position:relative;background:#f0f0f0;">
-          <canvas id="pvCanvas" width="860" height="520" style="display:block;width:100%;cursor:pointer;" onclick="pvToggle()"></canvas>
-          <div id="pvOverlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.65);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:opacity 0.2s;" onclick="pvToggle()">
-            <div style="width:66px;height:66px;background:#D4601D;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 8px 30px rgba(212,96,29,0.55);">
-              <div style="width:0;height:0;border-style:solid;border-width:12px 0 12px 22px;border-color:transparent transparent transparent #fff;margin-left:5px;"></div>
-            </div>
-            <div style="color:#fff;font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;">Watch Portal Walkthrough</div>
-            <div style="color:rgba(255,255,255,0.38);font-size:12px;margin-top:5px;font-family:'DM Sans',sans-serif;">Full feature demo — login, tickets, tracking, messaging, payments</div>
-          </div>
-        </div>
-        <div style="background:#0e0e0e;padding:9px 14px;display:flex;align-items:center;gap:10px;border-top:1px solid rgba(255,255,255,0.05);">
-          <button id="pvPlayBtn" onclick="pvToggle()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.6);font-size:14px;padding:0;line-height:1;width:20px;">&#9654;</button>
-          <div style="flex:1;position:relative;height:3px;background:rgba(255,255,255,0.1);border-radius:2px;cursor:pointer;" onclick="pvScrub(event,this)">
-            <div id="pvBar" style="height:100%;background:#D4601D;border-radius:2px;width:0%;pointer-events:none;"></div>
-          </div>
-          <span id="pvTime" style="font-size:10px;color:rgba(255,255,255,0.28);font-family:monospace;white-space:nowrap;">0:00</span>
-          <button onclick="pvRestart()" style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.28);font-size:11px;font-family:'DM Sans',sans-serif;padding:0;">Restart</button>
-        </div>
-      </div>
-      <div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;justify-content:center;">
-        <button onclick="pvJump(0)" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:100px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;" onmouseover="this.style.background='rgba(212,96,29,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.5)'">Login</button>
-        <button onclick="pvJump(1)" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:100px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;" onmouseover="this.style.background='rgba(212,96,29,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.5)'">Dashboard</button>
-        <button onclick="pvJump(2)" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:100px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;" onmouseover="this.style.background='rgba(212,96,29,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.5)'">New Ticket</button>
-        <button onclick="pvJump(3)" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:100px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;" onmouseover="this.style.background='rgba(212,96,29,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.5)'">Progress</button>
-        <button onclick="pvJump(4)" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:100px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;" onmouseover="this.style.background='rgba(212,96,29,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.5)'">Messaging</button>
-        <button onclick="pvJump(5)" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:100px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;" onmouseover="this.style.background='rgba(212,96,29,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.5)'">Payment</button>
-        <button onclick="pvJump(6)" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:100px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;" onmouseover="this.style.background='rgba(212,96,29,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.5)'">Dashboard Return</button>
-        <button onclick="pvJump(7)" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:100px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;" onmouseover="this.style.background='rgba(212,96,29,0.2)';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.5)'">Closing</button>
-      </div>
-    </div>
-  </div>
-</section>
-<script>
-(function(){
-'use strict';
-/* ============================================================
-   STEADY CONSTRUCTION CLIENT PORTAL DEMO v6
-   Key fix: dropdowns stored in pendingDropdowns[], drawn LAST
-   so they always appear on top of all other canvas content.
-   No voiceover. Caption bar only.
-   ============================================================ */
-
-var CV=null,CX=null,RAF=null,playing=false,frame=0;
-var W=860,H=520,TOTAL=7000;
-/* Chapter start frames */
-var CH=[0,540,1020,1680,2900,3950,4900,5800];
-
-var cur={x:430,y:260,tx:430,ty:260};
-var ripples=[];
-
-/* ── PALETTE ── */
-var BG='#f7f8fa',WH='#ffffff',NV='#1a1a2e',
-    OR='#D4601D',ORL='#e87a3a',ORBG='#fff3ec',
-    G1='#f0f1f3',G2='#dde0e6',G3='#9199a8',G4='#4a5264',
-    GRN='#16a34a',GRNBG='#f0fdf4',
-    BLU='#2563eb',BLUBG='#eff6ff',
-    AMB='#d97706',AMBBG='#fffbeb',
-    PUR='#7c3aed',PURBG='#f5f3ff',
-    DRK='#0f172a';
-
-/* ── MATH ── */
-function ei(t){return t<0.5?2*t*t:-1+(4-2*t)*t;}
-function lp(a,b,t){return a+(b-a)*t;}
-function cl(v,lo,hi){return Math.max(lo,Math.min(hi,v));}
-function pf(f,s,e){return cl((f-s)/(e-s),0,1);}
-
-/* ── DROPDOWN QUEUE ──
-   Each scene calls queueDropdown() instead of drawing directly.
-   After all scene content is painted, flushDropdowns() draws them
-   on top of everything — solving the z-order issue. */
-var pendingDropdowns=[];
-function queueDropdown(x,y,w,opts,sel){
-  pendingDropdowns.push({x:x,y:y,w:w,opts:opts,sel:sel});
-}
-function flushDropdowns(){
-  pendingDropdowns.forEach(function(d){
-    drawDropdownOpen(d.x,d.y,d.w,d.opts,d.sel);
-  });
-  pendingDropdowns=[];
-}
-function drawDropdownOpen(x,y,w,opts,sel){
-  var rowH=28,pad=8;
-  var oh=opts.length*rowH+pad*2;
-  /* Drop shadow beneath */
-  CX.save();
-  CX.shadowColor='rgba(0,0,0,0.18)';CX.shadowBlur=20;CX.shadowOffsetY=4;
-  rr(x,y+32,w,oh,8,WH,G2,1);CX.fill();
-  CX.restore();
-  /* Background & border */
-  rr(x,y+32,w,oh,8,WH,G2,1);
-  /* Options */
-  opts.forEach(function(o,i){
-    var oy=y+32+pad+i*rowH;
-    var oStr=typeof o==='string'?o:(o.label||o.val);
-    var isSel=typeof o==='string'?(o===sel):(o.val===sel);
-    if(isSel){
-      rr(x+4,oy,w-8,rowH-2,5,ORBG);
-    } else if(i>0){
-      CX.fillStyle=G2;CX.fillRect(x+10,oy,w-20,1);
-    }
-    CX.font=(isSel?'600':'400')+' 11px "DM Sans",sans-serif';
-    CX.fillStyle=isSel?OR:NV;CX.textAlign='left';
-    CX.fillText(oStr,x+14,oy+rowH/2+4);
-    if(typeof o==='object'&&o.sub){
-      CX.font='300 9px "DM Sans",sans-serif';CX.fillStyle=G3;
-      var mainW=CX.measureText(oStr).width;
-      CX.fillText(o.sub,x+14+mainW+8,oy+rowH/2+4);
-    }
-  });
-}
-
-/* ── PRIMITIVES ── */
-function rr(x,y,w,h,r,fill,stroke,lw){
-  if(w<=0||h<=0)return;
-  r=Math.min(r,w/2,h/2);
-  CX.beginPath();
-  CX.moveTo(x+r,y);CX.arcTo(x+w,y,x+w,y+r,r);
-  CX.arcTo(x+w,y+h,x+w-r,y+h,r);CX.arcTo(x,y+h,x,y+h-r,r);
-  CX.arcTo(x,y,x+r,y,r);CX.closePath();
-  if(fill){CX.fillStyle=fill;CX.fill();}
-  if(stroke){CX.strokeStyle=stroke;CX.lineWidth=lw||1;CX.stroke();}
-}
-function tx(s,x,y,sz,col,wt,al){
-  CX.font=(wt||'400')+' '+(sz||12)+'px "DM Sans",sans-serif';
-  CX.fillStyle=col||NV;CX.textAlign=al||'left';
-  CX.fillText(String(s),x,y);
-}
-function serif(s,x,y,sz,col,al){
-  CX.font='600 '+(sz||14)+'px "DM Serif Display",serif';
-  CX.fillStyle=col||NV;CX.textAlign=al||'left';
-  CX.fillText(String(s),x,y);
-}
-function lbl(s,x,y){
-  CX.font='600 9px "DM Sans",sans-serif';CX.fillStyle=G3;CX.textAlign='left';
-  CX.fillText(s.toUpperCase(),x,y);
-}
-function pill(s,x,y,bg,col){
-  CX.font='600 9px "DM Sans",sans-serif';
-  var w=CX.measureText(s).width+14;
-  rr(x,y,w,18,9,bg);
-  CX.fillStyle=col;CX.textAlign='center';CX.fillText(s,x+w/2,y+12);
-  return w;
-}
-function field(x,y,w,val,focused){
-  rr(x,y,w,30,6,focused?WH:G1,focused?OR:G2,focused?1.5:1);
-  CX.font='400 11px "DM Sans",sans-serif';
-  CX.fillStyle=val?NV:'#aaa';CX.textAlign='left';
-  CX.fillText(val||'',x+9,y+19);
-}
-function ddBox(x,y,w,val,focused){
-  rr(x,y,w,30,6,focused?WH:G1,focused?OR:G2,focused?1.5:1);
-  CX.font='400 11px "DM Sans",sans-serif';
-  CX.fillStyle=val?NV:'#aaa';CX.textAlign='left';
-  CX.fillText(val||'Select...',x+9,y+19);
-  CX.save();CX.strokeStyle=focused?OR:G3;CX.lineWidth=1.5;
-  CX.beginPath();CX.moveTo(x+w-14,y+11);CX.lineTo(x+w-9,y+17);CX.lineTo(x+w-4,y+11);
-  CX.stroke();CX.restore();
-}
-function radio(x,y,on,lbl2){
-  CX.save();
-  CX.beginPath();CX.arc(x+7,y+7,7,0,Math.PI*2);
-  CX.strokeStyle=on?OR:G2;CX.lineWidth=1.5;CX.stroke();
-  if(on){CX.beginPath();CX.arc(x+7,y+7,3.5,0,Math.PI*2);CX.fillStyle=OR;CX.fill();}
-  CX.restore();
-  tx(lbl2,x+20,y+11,11,NV);
-}
-function tickMark(cx2,cy2,sz,col){
-  CX.save();CX.strokeStyle=col||WH;CX.lineWidth=sz/4.5;
-  CX.lineCap='round';CX.lineJoin='round';
-  CX.beginPath();
-  CX.moveTo(cx2-sz*0.35,cy2);CX.lineTo(cx2-sz*0.05,cy2+sz*0.32);
-  CX.lineTo(cx2+sz*0.42,cy2-sz*0.28);
-  CX.stroke();CX.restore();
-}
-function moveTo(x,y){cur.tx=x;cur.ty=y;}
-function doRipple(){ripples.push({x:cur.x,y:cur.y,age:0,max:22});}
-function drawRipples(){
-  ripples.forEach(function(r){
-    var p=r.age/r.max;
-    CX.beginPath();CX.arc(r.x,r.y,p*24,0,Math.PI*2);
-    CX.strokeStyle='rgba(212,96,29,'+(1-p)*0.55+')';CX.lineWidth=1.5;CX.stroke();r.age++;
-  });
-  ripples=ripples.filter(function(r){return r.age<r.max;});
-}
-function drawCursor(){
-  var pressed=ripples.some(function(r){return r.age<8;});
-  CX.save();
-  CX.shadowColor='rgba(0,0,0,0.22)';CX.shadowBlur=5;
-  CX.translate(cur.x,cur.y);
-  CX.beginPath();
-  CX.moveTo(0,0);CX.lineTo(0,14);CX.lineTo(3.5,11);
-  CX.lineTo(5.5,16.5);CX.lineTo(7.5,15.5);CX.lineTo(5.5,10);CX.lineTo(10,10);
-  CX.closePath();
-  CX.fillStyle=pressed?OR:WH;CX.fill();
-  CX.shadowBlur=0;CX.strokeStyle='rgba(0,0,0,0.45)';CX.lineWidth=0.8;CX.stroke();
-  CX.restore();
-}
-
-/* ── SIDEBAR NAV ── */
-function navBar(activeIdx){
-  rr(0,0,178,H,0,WH,G2,1);
-  var lg=CX.createLinearGradient(16,14,48,48);
-  lg.addColorStop(0,OR);lg.addColorStop(1,ORL);
-  rr(16,14,32,32,8,lg);
-  CX.font='700 11px "DM Sans",sans-serif';CX.fillStyle=WH;CX.textAlign='center';CX.fillText('SC',32,34);
-  CX.font='700 11px "DM Sans",sans-serif';CX.fillStyle=NV;CX.textAlign='left';CX.fillText('Steady',56,24);
-  CX.font='300 9px "DM Sans",sans-serif';CX.fillStyle=G3;CX.fillText('Client Portal',56,36);
-  ['Dashboard','Tickets','Payments','Properties','Messages'].forEach(function(item,i){
-    var iy=60+i*46,isA=i===activeIdx;
-    if(isA)rr(8,iy,162,34,8,ORBG);
-    rr(16,iy+9,14,14,3,isA?OR:G2);
-    CX.font=(isA?'600':'400')+' 11px "DM Sans",sans-serif';
-    CX.fillStyle=isA?OR:G4;CX.textAlign='left';CX.fillText(item,38,iy+22);
-  });
-  rr(16,H-50,30,30,15,OR);
-  CX.font='600 10px "DM Sans",sans-serif';CX.fillStyle=WH;CX.textAlign='center';CX.fillText('JM',31,H-30);
-  tx('John Murphy',54,H-37,10,NV,'600');
-  tx('Landlord',54,H-25,9,G3,'300');
-  rr(178,0,W-178,48,0,WH,G2,1);
-}
-
-/* ── CAPTION BAR ── */
-function cap(line1,line2){
-  rr(0,H-52,W,52,0,'rgba(8,8,8,0.88)');
-  CX.fillStyle=OR;CX.fillRect(0,H-52,3,52);
-  CX.font='600 12px "DM Sans",sans-serif';CX.fillStyle=WH;CX.textAlign='center';
-  CX.fillText(line1,W/2,H-33);
-  if(line2){CX.font='300 10px "DM Sans",sans-serif';CX.fillStyle='rgba(255,255,255,0.45)';CX.fillText(line2,W/2,H-17);}
-}
-function chBadge(s){
-  CX.font='600 9px "DM Sans",sans-serif';
-  var w=CX.measureText(s).width+18;
-  rr(188,10,w,22,5,OR);
-  CX.fillStyle=WH;CX.textAlign='left';CX.fillText(s,197,24);
-}
-
-/* ═══════════════════════════════════════════
-   SCENE 0 — LOGIN  (0-539)
-   ═══════════════════════════════════════════ */
-function s0Login(f){
-  CX.fillStyle='#0f172a';CX.fillRect(0,0,W,H);
-  CX.save();CX.strokeStyle='rgba(255,255,255,0.025)';CX.lineWidth=1;
-  for(var xi=0;xi<W;xi+=44){CX.beginPath();CX.moveTo(xi,0);CX.lineTo(xi,H);CX.stroke();}
-  for(var yi=0;yi<H;yi+=44){CX.beginPath();CX.moveTo(0,yi);CX.lineTo(W,yi);CX.stroke();}
-  CX.restore();
-  var gr=CX.createRadialGradient(W/2,H/2,0,W/2,H/2,300);
-  gr.addColorStop(0,'rgba(212,96,29,0.13)');gr.addColorStop(1,'transparent');
-  CX.fillStyle=gr;CX.fillRect(0,0,W,H);
-
-  var appear=ei(pf(f,0,40));
-  var cardY=lp(H+30,H/2-160,ei(pf(f,0,50)));
-  var cw=320,cx2=W/2-cw/2;
-
-  CX.save();CX.globalAlpha=appear;
-  CX.save();CX.shadowColor='rgba(0,0,0,0.3)';CX.shadowBlur=50;
-  rr(cx2,cardY,cw,315,16,WH);CX.fill();CX.restore();
-  rr(cx2,cardY,cw,315,16,WH);
-  var lg2=CX.createLinearGradient(W/2-20,cardY+22,W/2+20,cardY+62);
-  lg2.addColorStop(0,OR);lg2.addColorStop(1,ORL);
-  rr(W/2-20,cardY+22,40,40,10,lg2);
-  CX.font='700 12px "DM Sans",sans-serif';CX.fillStyle=WH;CX.textAlign='center';CX.fillText('SC',W/2,cardY+46);
-  serif('Client Portal',W/2,cardY+88,18,NV,'center');
-  tx('Sign in to your account',W/2,cardY+104,11,G3,'300','center');
-  lbl('Email Address',cx2+16,cardY+126);
-  var em='john.murphy@landlord.ie';
-  var emV=f>80?em.substring(0,Math.floor(pf(f,80,180)*em.length)):'';
-  field(cx2+16,cardY+130,cw-32,emV,f>80&&f<180);
-  if(f>80&&f<180)moveTo(cx2+cw/2,cardY+145);
-  lbl('Password',cx2+16,cardY+176);
-  var pwV=f>200?'**********'.substring(0,Math.floor(pf(f,200,300)*10)):'';
-  field(cx2+16,cardY+180,cw-32,pwV,f>200&&f<300);
-  if(f>200&&f<300)moveTo(cx2+cw/2,cardY+195);
-  var ba=ei(pf(f,320,370));
-  rr(cx2+16,cardY+228,cw-32,38,8,'rgba(212,96,29,'+ba+')');
-  CX.font='600 13px "DM Sans",sans-serif';CX.fillStyle='rgba(255,255,255,'+ba+')';CX.textAlign='center';
-  CX.fillText('Sign In',W/2,cardY+251);
-  if(f>=325)moveTo(W/2,cardY+247);
-  if(f>390&&f<490){
-    var n=Math.floor(pf(f,390,470)*3)%3+1;
-    rr(cx2+16,cardY+228,cw-32,38,8,OR);
-    CX.font='600 13px "DM Sans",sans-serif';CX.fillStyle=WH;CX.textAlign='center';
-    CX.fillText('Signing in'+'...'.substring(0,n),W/2,cardY+251);
-  }
-  CX.restore();
-  if(f<180) cap('Secure client login','Each landlord has their own private account and password');
-  else cap('Works on any device','Desktop, tablet or mobile — access your portal anywhere');
-}
-
-/* ═══════════════════════════════════════════
-   SCENE 1 — DASHBOARD  (540-1019)
-   ═══════════════════════════════════════════ */
-function s1Dashboard(f){
-  CX.fillStyle=BG;CX.fillRect(0,0,W,H);
-  navBar(0);
-  var p=ei(pf(f,0,28));
-  CX.save();CX.globalAlpha=p;
-  tx('Welcome back, John',190,30,15,NV,'600');
-  tx('Wednesday 18 March 2026',190,45,10,G3,'300');
-  var kpis=[
-    {lbl:'Active Tickets',val:'12',sub:'+2 this week',sc:OR,sbg:ORBG},
-    {lbl:'In Progress',val:'5',sub:'3 on site today',sc:BLU,sbg:BLUBG},
-    {lbl:'Completed',val:'28',sub:'This month',sc:GRN,sbg:GRNBG},
-    {lbl:'Pending Payments',val:'EUR 2,450',sub:'2 invoices',sc:AMB,sbg:AMBBG},
-  ];
-  var kw=(W-190)/4-6;
-  kpis.forEach(function(k,i){
-    var kx=190+i*(kw+6),ky=58;
-    var ka=ei(pf(f,4+i*10,28+i*10));
-    CX.save();CX.globalAlpha*=ka;
-    rr(kx,ky,kw,70,10,WH,G2);rr(kx,ky,kw,3,2,k.sc);
-    lbl(k.lbl,kx+10,ky+18);
-    CX.font='400 21px "DM Serif Display",serif';CX.fillStyle=k.sc;CX.textAlign='left';
-    CX.fillText(k.val,kx+10,ky+46);
-    tx(k.sub,kx+10,ky+60,9,G3,'300');
-    CX.restore();
-  });
-  tx('Recent Activity',190,142,12,NV,'600');
-  var acts=[
-    {ref:'#T-1023',type:'Electrical',addr:'8 Pearse St, D2',status:'In Progress',sc:BLU,sbg:BLUBG},
-    {ref:'#T-1022',type:'Carpentry',addr:'5 Cork Ave, D4',status:'Scheduled',sc:OR,sbg:ORBG},
-    {ref:'#T-1019',type:'Roofing',addr:'5 Cork Ave, D4',status:'Completed',sc:GRN,sbg:GRNBG},
-  ];
-  acts.forEach(function(a,i){
-    var ay=155+i*54,aa=ei(pf(f,18+i*12,40+i*12));
-    CX.save();CX.globalAlpha*=aa;
-    rr(190,ay,W-198,46,8,WH,G2);rr(190,ay,3,46,2,a.sc);
-    tx(a.ref,200,ay+16,9,G3,'600');
-    tx(a.type+' — '+a.addr,200,ay+30,12,NV,'500');
-    pill(a.status,W-132,ay+15,a.sbg,a.sc);
-    CX.restore();
-  });
-  if(f<80)moveTo(190+kw*0.5,93);
-  else if(f<180)moveTo(190+kw*1.6,93);
-  else if(f<280)moveTo(190+kw*2.6,93);
-  else moveTo(190+kw*3.6,93);
-  CX.restore();
-  chBadge('01  Dashboard');
-  if(f<130) cap('Live dashboard overview','Active tickets, jobs in progress, completions and pending payments');
-  else if(f<280) cap('Four key metrics update in real time','See what is active, who is on site, and what is outstanding');
-  else cap('Recent activity feed','Every update across all your properties — no chasing required');
-}
-
-/* ═══════════════════════════════════════════
-   SCENE 2 — CREATE TICKET  (1020-1679)
-   All dropdowns queued and flushed LAST
-   ═══════════════════════════════════════════ */
-function s2Create(f){
-  CX.fillStyle=BG;CX.fillRect(0,0,W,H);
-  navBar(1);
-  tx('Create New Ticket',190,30,15,NV,'600');
-  tx('Raise a maintenance or construction job',190,44,10,G3,'300');
-  rr(190,52,W-198,H-60,10,WH,G2);
-
-  var lx=202,rx=202+(W-220)/2+8,fw=(W-220)/2-8;
-
-  /* ── Draw all static form content first ── */
-
-  /* Property address label + box */
-  lbl('Property Address',lx,76);
-  var propV=f>20?'12 Dublin Street, Dublin 1':'';
-  ddBox(lx,80,fw,propV,f>15&&f<90);
-  if(f>15&&f<90)moveTo(lx+fw/2,95);
-
-  /* Issue type label + box */
-  lbl('Issue Type',rx,76);
-  var issV=f>100?'Plumbing':'';
-  ddBox(rx,80,fw,issV,f>95&&f<190);
-  if(f>95&&f<190)moveTo(rx+fw/2,95);
-
-  /* Contractor label + box */
-  lbl('Contractor Required',lx,130);
-  var conV=f>200?'Plumber':'';
-  ddBox(lx,134,fw,conV,f>195&&f<370);
-  if(f>195&&f<370)moveTo(lx+fw/2,149);
-
-  /* Request type label + box */
-  lbl('Request Type',rx,130);
-  var reqV=f>380?'Call Out + Quote':'';
-  ddBox(rx,134,fw,reqV,f>375&&f<470);
-  if(f>375&&f<470)moveTo(rx+fw/2,149);
-
-  /* Description textarea */
-  lbl('Description of Issue',lx,182);
-  var descFull='Leak under kitchen sink — water dripping from waste pipe connection.';
-  var descV=f>480?descFull.substring(0,Math.floor(pf(f,480,555)*descFull.length)):'';
-  rr(lx,186,W-220,44,6,f>480&&f<555?WH:G1,f>480&&f<555?OR:G2,f>480?1.5:1);
-  CX.font='400 10px "DM Sans",sans-serif';CX.fillStyle=descV?NV:'#aaa';CX.textAlign='left';
-  var dwords=descV.split(' '),dline='',dly=200;
-  dwords.forEach(function(w){
-    var test=dline+(dline?' ':'')+w;
-    if(CX.measureText(test).width>W-232){CX.fillText(dline,lx+8,dly);dline=w;dly+=13;}
-    else dline=test;
-  });
-  if(dline)CX.fillText(dline,lx+8,dly);
-  if(f>480&&f<555)moveTo(lx+120,200);
-
-  /* Occupancy */
-  lbl('Property Occupied?',lx,248);
-  radio(lx,252,f>565,'Yes — Tenant in residence');
-  radio(lx+180,252,false,'No — Vacant');
-  if(f>560&&f<610)moveTo(lx+7,259);
-
-  /* Access */
-  lbl('Access Instructions',rx,248);
-  var accFull='Tenant available after 2pm. Key in lockbox — code 4821.';
-  var accV=f>620?accFull.substring(0,Math.floor(pf(f,620,680)*accFull.length)):'';
-  field(rx,252,fw,accV,f>618&&f<680);
-  if(f>618&&f<680)moveTo(rx+fw/2,267);
-
-  /* Submit */
-  var sba=ei(pf(f,690,720));
-  rr(lx,306,170,36,8,'rgba(212,96,29,'+sba+')');
-  CX.font='600 12px "DM Sans",sans-serif';CX.fillStyle='rgba(255,255,255,'+sba+')';CX.textAlign='center';
-  CX.fillText('Submit Ticket',lx+85,328);
-  if(f>=694)moveTo(lx+85,324);
-
-  /* Success */
-  if(f>740){
-    var sp=ei(pf(f,740,775));
-    CX.save();CX.globalAlpha*=sp;
-    rr(lx,350,W-220,50,10,GRNBG,GRN,1.5);
-    CX.font='600 12px "DM Sans",sans-serif';CX.fillStyle=GRN;CX.textAlign='center';
-    CX.fillText('Ticket #T-1024 created — your team has been notified',W/2,373);
-    CX.font='300 10px "DM Sans",sans-serif';CX.fillStyle=GRN;
-    CX.fillText('You will receive live updates as the job progresses.',W/2,389);
-    CX.restore();
-  }
-
-  chBadge('02  New Ticket');
-
-  /* Caption (drawn before dropdowns so dropdowns sit on top) */
-  if(f<90) cap('Select the property address','Choose from all your registered properties');
-  else if(f<190) cap('Select the issue type','Plumbing, electrical, carpentry, roofing, painting and more');
-  else if(f<370) cap('Select the contractor category','Choose the trade you need — plumber, electrician, carpenter and more');
-  else if(f<470) cap('Request type — Call Out and Quote','We visit, assess, and provide a fixed price before work begins');
-  else if(f<560) cap('Describe the issue','Detail helps the contractor arrive fully prepared');
-  else if(f<680) cap('Occupancy and access instructions','Is a tenant in? What is the key access? Any notes for the contractor?');
-  else cap('Submit — ticket created instantly','Reference generated, team notified. No phone call needed.');
-
-  /* ── QUEUE DROPDOWNS — drawn on top of everything including caption ── */
-  if(f>15&&f<90){
-    queueDropdown(lx,80,fw,[
-      {val:'12 Dublin Street, Dublin 1',label:'12 Dublin Street, Dublin 1'},
-      {val:'5 Cork Avenue, Dublin 4',label:'5 Cork Avenue, Dublin 4'},
-      {val:'8 Pearse Street, Dublin 2',label:'8 Pearse Street, Dublin 2'},
-    ],f>45?'12 Dublin Street, Dublin 1':'');
-  }
-  if(f>95&&f<190){
-    queueDropdown(rx,80,fw,[
-      {val:'Plumbing',label:'Plumbing',sub:'leaks, pipes, drains'},
-      {val:'Electrical',label:'Electrical',sub:'wiring, sockets, fuse box'},
-      {val:'Carpentry',label:'Carpentry',sub:'doors, windows, joinery'},
-      {val:'Roofing',label:'Roofing',sub:'slates, gutters, felt'},
-      {val:'Painting',label:'Painting',sub:'interior & exterior'},
-      {val:'General',label:'General Maintenance'},
-    ],f>140?'Plumbing':'');
-  }
-  if(f>195&&f<370){
-    /* Contractor — category only, no names. SLOWED (175 frames) */
-    queueDropdown(lx,134,fw,[
-      {val:'Plumber',label:'Plumber',sub:'water, pipes & drainage'},
-      {val:'Electrician',label:'Electrician',sub:'wiring, sockets & fuse box'},
-      {val:'Carpenter',label:'Carpenter',sub:'doors, frames & joinery'},
-      {val:'Roofer',label:'Roofer',sub:'slates, gutters & felt'},
-      {val:'Painter',label:'Painter',sub:'interior & exterior painting'},
-      {val:'Cleaning',label:'Cleaning Team',sub:'end of tenancy & maintenance'},
-    ],f>270?'Plumber':'');
-  }
-  if(f>375&&f<470){
-    queueDropdown(rx,134,fw,[
-      {val:'Call Out + Quote',label:'Call Out + Quote',sub:'visit & fixed price'},
-      {val:'Call Out Only',label:'Call Out Only',sub:'emergency attendance'},
-      {val:'Quote Only',label:'Quote Only',sub:'estimate without work'},
-    ],f>420?'Call Out + Quote':'');
-  }
-}
-
-/* ═══════════════════════════════════════════
-   SCENE 3 — PROGRESS  (1680-2899)
-   Fixed-height rows, no overlapping text
-   ═══════════════════════════════════════════ */
-function s3Progress(f){
-  CX.fillStyle=BG;CX.fillRect(0,0,W,H);
-  navBar(1);
-  tx('Tickets',190,28,10,G3);tx(' > ',222,28,10,G3);tx('#T-1024',240,28,10,OR,'600');
-  serif('#T-1024 — Plumbing',190,46,15,NV);
-  tx('12 Dublin Street, Dublin 1',190,60,10,G3,'300');
-
-  var stIdx=Math.min(3,Math.floor(pf(f,60,600)*4));
-  var statuses=['Pending','Assigned','Scheduled','In Progress'];
-  var stCols=[AMB,PUR,OR,BLU];
-  var stBgs=[AMBBG,PURBG,ORBG,BLUBG];
-  pill(statuses[stIdx],W-162,36,stBgs[stIdx],stCols[stIdx]);
-
-  var p=ei(pf(f,0,22));CX.save();CX.globalAlpha=p;
-
-  /* Info grid */
-  var infos=[
-    ['Contractor',stIdx>=1?'Plumber assigned':'Pending'],
-    ['Trade','Plumbing'],
-    ['Scheduled',stIdx>=2?'Tomorrow at 11:00 AM':'To be confirmed'],
-    ['Estimate',stIdx>=2?'EUR 180 - 260':'Pending quote'],
-    ['Occupancy','Tenant in residence'],
-    ['Access','After 2pm — code 4821'],
-  ];
-  var iw=(W-198)/3-4,igap=6;
-  infos.forEach(function(inf,i){
-    var ix=190+(i%3)*(iw+igap),iy=70+(Math.floor(i/3)*44);
-    var ia=ei(pf(f,4+i*6,24+i*6));
-    CX.save();CX.globalAlpha*=ia;
-    rr(ix,iy,iw,36,6,WH,G2);lbl(inf[0],ix+10,iy+13);
-    var vc=(inf[1]==='Pending'||inf[1]==='To be confirmed'||inf[1]==='Pending quote')?G3:NV;
-    tx(inf[1],ix+10,iy+28,10,vc,'500');
-    CX.restore();
-  });
-
-  /* Progress bar */
-  var barY=164;
-  tx('Job Progress',190,barY,12,NV,'600');
-  rr(190,barY+6,W-198,46,8,WH,G2);
-  var stages=['Received','Assigned','Scheduled','In Progress','Completed'];
-  var sw=(W-218)/stages.length;
-  stages.forEach(function(s,i){
-    var sx=204+i*sw+sw/2,done=i<stIdx,active=i===stIdx;
-    var sfa=ei(pf(f,8+i*14,32+i*14));
-    CX.save();CX.globalAlpha*=sfa;
-    if(i<stages.length-1){
-      CX.beginPath();CX.moveTo(sx+10,barY+26);CX.lineTo(sx+sw-10,barY+26);
-      CX.strokeStyle=done?stCols[stIdx]:G2;CX.lineWidth=2;CX.stroke();
-    }
-    CX.beginPath();CX.arc(sx,barY+26,9,0,Math.PI*2);
-    CX.fillStyle=active?stCols[stIdx]:(done?NV:G2);CX.fill();
-    if(done)tickMark(sx,barY+26,9,WH);
-    if(active){CX.font='700 8px "DM Sans",sans-serif';CX.fillStyle=WH;CX.textAlign='center';CX.fillText('>',sx,barY+30);}
-    CX.font=(active?'600':'400')+' 8px "DM Sans",sans-serif';
-    CX.fillStyle=active?stCols[stIdx]:(done?NV:G3);CX.textAlign='center';
-    CX.fillText(s,sx,barY+46);
-    CX.restore();
-  });
-
-  /* Status timeline — fixed-height rows, no shifting */
-  var tlY=220;
-  tx('Status Updates',190,tlY,12,NV,'600');
-  var rowH=48,rows=4;
-  rr(190,tlY+8,W-198,rowH*rows+10,8,WH,G2);
-
-  var updates=[
-    {t:'Today 09:15',m:'Ticket #T-1024 created — plumbing job at 12 Dublin St.',at:0},
-    {t:'Today 09:42',m:'Plumber assigned to this job.',at:160},
-    {t:'Today 10:05',m:'Job scheduled — arriving tomorrow at 11:00 AM.',at:330},
-    {t:'Tomorrow 11:08',m:'Contractor on site — work now in progress.',at:500},
-  ];
-  updates.forEach(function(u,i){
-    var ry=tlY+16+i*rowH;
-    if(i>0){CX.fillStyle=G1;CX.fillRect(202,ry,W-220,1);}
-    var da=f>=u.at?ei(pf(f,u.at,u.at+30)):0;
-    CX.save();CX.globalAlpha*=da;
-    CX.beginPath();CX.arc(202,ry+22,5,0,Math.PI*2);
-    CX.fillStyle=i===stIdx?stCols[stIdx]:NV;CX.fill();
-    /* Time on one line */
-    tx(u.t,214,ry+16,9,G3,'600');
-    /* Message on next line, clipped */
-    CX.save();
-    CX.beginPath();CX.rect(214,ry+22,W-232,16);CX.clip();
-    tx(u.m,214,ry+33,10,NV);
-    CX.restore();
-    CX.restore();
-  });
-
-  /* Email notification toast */
-  if(f>200&&stIdx>=1){
-    var na=ei(pf(f,200+stIdx*80,230+stIdx*80));
-    CX.save();CX.globalAlpha*=na;
-    rr(W-250,14,238,52,10,DRK);rr(W-250,14,3,52,2,OR);
-    tx('Email sent to client',W-240,30,11,WH,'600');
-    var ntxt=['','Plumber assigned to your job','Scheduled: tomorrow 11am','Contractor is now on site'];
-    tx(ntxt[stIdx]||'',W-240,46,10,'rgba(255,255,255,0.42)','300');
-    CX.restore();
-  }
-
-  CX.restore();
-  chBadge('03  Progress Tracker');
-  if(f<150) cap('Track your ticket live','Every status change is visible here in real time');
-  else if(f<350) cap('Five-stage progress tracker','Received, Assigned, Scheduled, In Progress, Completed');
-  else if(f<560) cap('Each update logged with time and detail','Full transparency on every stage of your job');
-  else cap('Automatic email at every stage change','Always informed — even when not logged in');
-}
-
-/* ═══════════════════════════════════════════
-   SCENE 4 — MESSAGING  (2900-3949)
-   ═══════════════════════════════════════════ */
-function s4Messaging(f){
-  CX.fillStyle=BG;CX.fillRect(0,0,W,H);
-  navBar(1);
-  tx('Tickets',190,28,10,G3);tx(' > ',222,28,10,G3);tx('#T-1024 — Messages',240,28,10,OR,'600');
-  serif('Communication Log',190,46,15,NV);
-  tx('All messages stored permanently against this job.',190,60,10,G3,'300');
-
-  var msgs=[
-    {from:'system',text:'Ticket created. Team notified.',time:'09:15'},
-    {from:'team',  text:'Hi John — the plumber will be with you tomorrow at 11am. He will call 30 minutes before arrival.',time:'09:42',name:'Steady Team'},
-    {from:'client',text:'Perfect. Key is in the lockbox at the front. Code is 4821.',time:'10:05',name:'You'},
-    {from:'team',  text:'On site now. Found the issue — faulty waste trap. Replacing now, approximately 45 minutes.',time:'11:14',name:'Plumber'},
-    {from:'client',text:'Great, thank you for the update.',time:'11:22',name:'You'},
-    {from:'team',  text:'All done. Before and after photos attached. Invoice to follow.',time:'11:58',name:'Plumber'},
-  ];
-  var my=72;
-  msgs.forEach(function(m,i){
-    var showAt=i*90;if(f<showAt)return;
-    var ma=ei(pf(f,showAt,showAt+28));
-    CX.save();CX.globalAlpha*=ma;
-    var isClient=m.from==='client',isSys=m.from==='system';
-    if(isSys){
-      CX.font='300 9px "DM Sans",sans-serif';CX.fillStyle=G3;CX.textAlign='center';
-      CX.fillText(m.text,W/2,my+8);my+=22;CX.restore();return;
-    }
-    CX.font='400 11px "DM Sans",sans-serif';
-    var lines=[''];
-    m.text.split(' ').forEach(function(w){
-      var cur2=lines[lines.length-1];
-      if(CX.measureText(cur2+(cur2?' ':'')+w).width>285)lines.push(w);
-      else lines[lines.length-1]=cur2+(cur2?' ':'')+w;
-    });
-    var bw=0;
-    lines.forEach(function(l){var lw=CX.measureText(l).width+24;if(lw>bw)bw=lw;});
-    bw=Math.min(bw,310);
-    var bh=lines.length*15+20;
-    var bx=isClient?W-14-bw:190;
-    rr(bx,my,bw,bh,10,isClient?OR:WH,isClient?'transparent':G2);
-    lines.forEach(function(l,li){
-      CX.fillStyle=isClient?WH:NV;CX.textAlign='left';CX.fillText(l,bx+12,my+15+li*15);
-    });
-    CX.font='300 9px "DM Sans",sans-serif';
-    CX.fillStyle=isClient?'rgba(255,255,255,0.5)':G3;
-    CX.textAlign=isClient?'right':'left';
-    CX.fillText((m.name||'')+' - '+m.time,isClient?bx+bw-8:bx+12,my+bh+9);
-    my+=bh+22;CX.restore();
-  });
-
-  rr(190,H-86,W-198,34,7,WH,G2);
-  var typing=f>520?'Is there anything else needed after the repair?'.substring(0,Math.floor(pf(f,520,620)*48)):'';
-  tx(typing||'Type a message to your team...',200,H-64,11,typing?NV:G3);
-  if(f>520)moveTo(330,H-69);
-  rr(W-76,H-90,62,38,7,OR);
-  CX.font='600 11px "DM Sans",sans-serif';CX.fillStyle=WH;CX.textAlign='center';CX.fillText('Send',W-45,H-65);
-
-  chBadge('04  Messaging');
-  if(f<80) cap('Dedicated messaging on every ticket','Your direct line to the team handling your job');
-  else if(f<250) cap('Full conversation history stored permanently','Every message kept — even after the job is completed');
-  else cap('Real-time replies from contractor on site','Ask questions, share access details, get live updates');
-}
-
-/* ═══════════════════════════════════════════
-   SCENE 5 — PAYMENT  (3950-4899)
-   ═══════════════════════════════════════════ */
-function s5Payment(f){
-  CX.fillStyle=BG;CX.fillRect(0,0,W,H);
-  navBar(2);
-  var p=ei(pf(f,0,22));CX.save();CX.globalAlpha=p;
-  tx('Payments',190,30,15,NV,'600');
-  rr(190,44,124,26,6,ORBG);tx('Unpaid: EUR 2,450',198,61,10,OR,'600');
-  rr(322,44,158,26,6,GRNBG);tx('Paid this month: EUR 4,820',330,61,10,GRN,'600');
-
-  rr(190,78,W-198,84,10,WH,G2);rr(190,78,3,84,2,AMB);
-  tx('#T-1024 — Plumbing',200,96,12,NV,'600');
-  tx('12 Dublin Street, Dublin 1',200,110,10,G3,'300');
-  tx('Completed — 19 March 2026',200,122,10,G3,'300');
-  CX.font='400 22px "DM Serif Display",serif';CX.fillStyle=NV;CX.textAlign='right';
-  CX.fillText('EUR 180.00',W-206,108);
-  CX.font='300 10px "DM Sans",sans-serif';CX.fillStyle=G3;CX.textAlign='right';
-  CX.fillText('Due within 5 days',W-206,122);
-
-  var underReview=f>530;
-  pill(underReview?'Under Review':'Awaiting Payment',W-170,82,underReview?PURBG:AMBBG,underReview?PUR:AMB);
-
-  var fa=ei(pf(f,40,75));CX.save();CX.globalAlpha*=fa;
-  tx('Log Your Payment',190,175,12,NV,'600');
-  tx('Make your bank transfer then enter the details below. We will cross-reference and confirm.',190,189,10,G3,'300');
-  rr(190,198,W-198,150,10,WH,G2);
-  lbl('Bank Transfer Reference',202,218);
-  var refV=f>200?'REF-2024-78241'.substring(0,Math.floor(pf(f,200,310)*14)):'';
-  field(202,222,(W-218)/2,refV,f>198&&f<310);
-  if(f>198&&f<310)moveTo(202+(W-218)/4,237);
-  lbl('Amount Paid',202+(W-218)/2+8,218);
-  var amtV=f>330?'EUR 180.00':'';
-  field(202+(W-218)/2+8,222,(W-218)/2,amtV,f>328&&f<400);
-  if(f>328&&f<400)moveTo(202+(W-218)/2+8+(W-218)/4,237);
-  lbl('Date of Transfer',202,266);
-  var dateV=f>415?'19 March 2026':'';
-  field(202,270,(W-218)/2,dateV,f>413&&f<480);
-  if(f>413&&f<480)moveTo(202+(W-218)/4,285);
-  lbl('Notes (optional)',202+(W-218)/2+8,266);
-  field(202+(W-218)/2+8,270,(W-218)/2,'',false);
-  var sba=ei(pf(f,495,525));
-  if(!underReview){
-    rr(202,312,230,34,8,'rgba(212,96,29,'+sba+')');
-    CX.font='600 12px "DM Sans",sans-serif';CX.fillStyle='rgba(255,255,255,'+sba+')';CX.textAlign='center';
-    CX.fillText('I have made this payment',317,333);
-    if(f>=500)moveTo(317,329);
-  }
-  CX.restore();
-  if(underReview){
-    var ua=ei(pf(f,530,560));
-    CX.save();CX.globalAlpha*=ua;
-    rr(202,312,W-210,52,10,PURBG,PUR,1.5);
-    CX.font='600 12px "DM Sans",sans-serif';CX.fillStyle=PUR;CX.textAlign='center';
-    CX.fillText('Payment submitted — Under Review',W/2,334);
-    CX.font='300 10px "DM Sans",sans-serif';CX.fillStyle=PUR;
-    CX.fillText('Our team will cross-reference your bank transfer and confirm within 1 business day.',W/2,350);
-    CX.restore();
-    if(f===531)doRipple();
-  }
-  CX.restore();
-  chBadge('05  Payments');
-  if(f<100) cap('Invoice appears when job is complete','Amount, due date and payment status — all visible');
-  else if(f<300) cap('Enter your bank transfer reference','The reference number from your online banking transfer');
-  else if(f<495) cap('Add amount and date of transfer','Gives our team everything needed to match your payment');
-  else if(!underReview) cap('"I have made this payment"','No card payment — transfer directly, then log it here');
-  else cap('Status: Under Review','Admin confirms your payment within one business day');
-}
-
-/* ═══════════════════════════════════════════
-   SCENE 6 — DASHBOARD RETURN  (4900-5799)
-   ═══════════════════════════════════════════ */
-function s6DashReturn(f){
-  CX.fillStyle=BG;CX.fillRect(0,0,W,H);
-  navBar(0);
-  var p=ei(pf(f,0,28));CX.save();CX.globalAlpha=p;
-  tx('Welcome back, John',190,30,15,NV,'600');
-  tx('Wednesday 18 March 2026  —  Updated',190,45,10,G3,'300');
-  var kpis=[
-    {lbl:'Active Tickets',val:'11',sub:'-1 completed today',sc:OR,sbg:ORBG,upd:true},
-    {lbl:'In Progress',val:'4',sub:'Plumber job done',sc:BLU,sbg:BLUBG,upd:false},
-    {lbl:'Completed',val:'29',sub:'+1 just now',sc:GRN,sbg:GRNBG,upd:true},
-    {lbl:'Pending Payments',val:'EUR 2,270',sub:'Payment under review',sc:PUR,sbg:PURBG,upd:true},
-  ];
-  var kw=(W-190)/4-6;
-  kpis.forEach(function(k,i){
-    var kx=190+i*(kw+6),ky=58,ka=ei(pf(f,4+i*10,28+i*10));
-    CX.save();CX.globalAlpha*=ka;
-    rr(kx,ky,kw,70,10,k.upd?'#fefdf8':WH,k.upd?k.sc:G2,k.upd?1.5:1);
-    rr(kx,ky,kw,3,2,k.sc);
-    lbl(k.lbl,kx+10,ky+18);
-    CX.font='400 21px "DM Serif Display",serif';CX.fillStyle=k.sc;CX.textAlign='left';
-    CX.fillText(k.val,kx+10,ky+46);
-    tx(k.sub,kx+10,ky+60,9,k.upd?k.sc:G3,k.upd?'500':'300');
-    CX.restore();
-  });
-  tx('Recent Activity',190,142,12,NV,'600');
-  var acts=[
-    {ref:'#T-1024',type:'Plumbing — Completed',addr:'12 Dublin St, D1',status:'Under Review',sc:PUR,sbg:PURBG,fresh:true},
-    {ref:'#T-1023',type:'Electrical',addr:'8 Pearse St, D2',status:'In Progress',sc:BLU,sbg:BLUBG,fresh:false},
-    {ref:'#T-1022',type:'Carpentry',addr:'5 Cork Ave, D4',status:'Scheduled',sc:OR,sbg:ORBG,fresh:false},
-  ];
-  acts.forEach(function(a,i){
-    var ay=155+i*54,aa=ei(pf(f,12+i*12,36+i*12));
-    CX.save();CX.globalAlpha*=aa;
-    rr(190,ay,W-198,46,8,a.fresh?PURBG:WH,a.fresh?PUR:G2,a.fresh?1.5:1);
-    rr(190,ay,3,46,2,a.sc);
-    tx(a.ref,200,ay+16,9,G3,'600');
-    tx(a.type+' — '+a.addr,200,ay+30,12,NV,'500');
-    pill(a.status,W-140,ay+15,a.sbg,a.sc);
-    if(a.fresh)tx('Just now',W-50,ay+22,9,PUR,'600','right');
-    CX.restore();
-  });
-  if(f<80)moveTo(190+kw*2.5,93);
-  else if(f<200)moveTo(190+kw*3.6,93);
-  else moveTo(190+kw*0.5,180);
-  CX.restore();
-  chBadge('06  Dashboard Updated');
-  if(f<120) cap('Dashboard updated automatically','Completed jobs up, active tickets down, payments reflect the review');
-  else if(f<280) cap('Everything stays in sync','Multiple properties, multiple jobs — all in one clean overview');
-  else cap('Nothing falls through the cracks','Full audit trail of every job across your entire portfolio');
-}
-
-/* ═══════════════════════════════════════════
-   SCENE 7 — CLOSING  (5800+)
-   ═══════════════════════════════════════════ */
-function s7Closing(f){
-  CX.fillStyle='#0f172a';CX.fillRect(0,0,W,H);
-  CX.save();CX.strokeStyle='rgba(255,255,255,0.02)';CX.lineWidth=1;
-  for(var xi=0;xi<W;xi+=44){CX.beginPath();CX.moveTo(xi,0);CX.lineTo(xi,H);CX.stroke();}
-  for(var yi=0;yi<H;yi+=44){CX.beginPath();CX.moveTo(0,yi);CX.lineTo(W,yi);CX.stroke();}
-  CX.restore();
-  var gr=CX.createRadialGradient(W/2,H/2-40,0,W/2,H/2-40,380);
-  gr.addColorStop(0,'rgba(212,96,29,0.14)');gr.addColorStop(1,'transparent');
-  CX.fillStyle=gr;CX.fillRect(0,0,W,H);
-
-  var la=ei(pf(f,0,35));
-  CX.save();CX.globalAlpha=la;
-  var lg3=CX.createLinearGradient(W/2-22,H/2-158,W/2+22,H/2-118);
-  lg3.addColorStop(0,OR);lg3.addColorStop(1,ORL);
-  rr(W/2-22,H/2-162,44,44,12,lg3);
-  CX.font='700 14px "DM Sans",sans-serif';CX.fillStyle=WH;CX.textAlign='center';CX.fillText('SC',W/2,H/2-134);
-  CX.restore();
-
-  CX.save();CX.globalAlpha=ei(pf(f,40,80));
-  CX.font='300 26px "DM Serif Display",serif';CX.fillStyle='rgba(255,255,255,0.9)';CX.textAlign='center';
-  CX.fillText('Full Control.',W/2,H/2-68);CX.restore();
-
-  CX.save();CX.globalAlpha=ei(pf(f,90,130));
-  CX.font='600 34px "DM Serif Display",serif';CX.fillStyle=OR;CX.textAlign='center';
-  CX.fillText('Real-Time Updates.',W/2,H/2-24);CX.restore();
-
-  CX.save();CX.globalAlpha=ei(pf(f,140,180));
-  CX.font='300 26px "DM Serif Display",serif';CX.fillStyle='rgba(255,255,255,0.9)';CX.textAlign='center';
-  CX.fillText('Complete Transparency.',W/2,H/2+20);CX.restore();
-
-  CX.save();CX.globalAlpha=ei(pf(f,200,240));
-  CX.font='300 14px "DM Sans",sans-serif';CX.fillStyle='rgba(255,255,255,0.42)';CX.textAlign='center';
-  CX.fillText('Manage your properties smarter.',W/2,H/2+65);CX.restore();
-
-  var ba2=ei(pf(f,255,295));
-  CX.save();CX.globalAlpha=ba2;
-  rr(W/2-110,H/2+82,220,42,12,OR);
-  var glw=CX.createRadialGradient(W/2,H/2+103,0,W/2,H/2+103,90);
-  glw.addColorStop(0,'rgba(212,96,29,0.3)');glw.addColorStop(1,'transparent');
-  CX.fillStyle=glw;CX.fillRect(W/2-110,H/2+60,220,60);
-  CX.font='600 13px "DM Sans",sans-serif';CX.fillStyle=WH;CX.textAlign='center';
-  CX.fillText('Get Started Today',W/2,H/2+107);CX.restore();
-
-  CX.save();CX.globalAlpha=ei(pf(f,310,350));
-  CX.font='500 10px "DM Sans",sans-serif';
-  var features=['Saves time','Full transparency','Centralised comms','Landlord control','Live tracking'];
-  var totalFW=0;
-  features.forEach(function(ft){totalFW+=CX.measureText(ft).width+28+10;});totalFW-=10;
-  var fsx=W/2-totalFW/2;
-  features.forEach(function(ft){
-    var fw2=CX.measureText(ft).width+28;
-    rr(fsx,H/2+142,fw2,22,11,'rgba(255,255,255,0.07)','rgba(255,255,255,0.14)',1);
-    CX.fillStyle='rgba(255,255,255,0.52)';CX.textAlign='center';CX.fillText(ft,fsx+fw2/2,H/2+156);
-    fsx+=fw2+10;
-  });
-  CX.restore();
-  if(f>255)moveTo(W/2,H/2+103);
-}
-
-/* ══════════════════════════════════════════
-   DISPATCH — scene draws content, queues
-   dropdowns, then flushDropdowns() renders
-   them on top of ALL canvas content
-   ══════════════════════════════════════════ */
-function dispatch(f){
-  cur.x=lp(cur.x,cur.tx,0.16);
-  cur.y=lp(cur.y,cur.ty,0.16);
-
-  if     (f<CH[1])s0Login(f-CH[0]);
-  else if(f<CH[2])s1Dashboard(f-CH[1]);
-  else if(f<CH[3])s2Create(f-CH[2]);
-  else if(f<CH[4])s3Progress(f-CH[3]);
-  else if(f<CH[5])s4Messaging(f-CH[4]);
-  else if(f<CH[6])s5Payment(f-CH[5]);
-  else if(f<CH[7])s6DashReturn(f-CH[6]);
-  else            s7Closing(f-CH[7]);
-
-  /* Draw dropdowns on top of everything */
-  flushDropdowns();
-
-  /* Cursor and ripples always on very top */
-  drawCursor();
-  drawRipples();
-
-  if(CH.indexOf(f)!==-1&&f>0)doRipple();
-}
-
-/* ══════════════════════════════════════════
-   ENGINE
-   ══════════════════════════════════════════ */
-function loop(){
-  if(!playing)return;
-  frame=Math.min(frame+1,TOTAL);
-  dispatch(frame);
-  document.getElementById('pvBar').style.width=((frame/TOTAL)*100)+'%';
-  var s=Math.floor(frame/60),m=Math.floor(s/60),sec=s%60;
-  document.getElementById('pvTime').textContent=m+':'+(sec<10?'0':'')+sec;
-  if(frame>=TOTAL){
-    playing=false;
-    document.getElementById('pvPlayBtn').innerHTML='&#9654;';
-    var ov=document.getElementById('pvOverlay');ov.style.opacity='1';ov.style.pointerEvents='auto';
-    return;
-  }
-  RAF=requestAnimationFrame(loop);
-}
-
-window.pvToggle=function(){
-  if(!CV){CV=document.getElementById('pvCanvas');CX=CV.getContext('2d');}
-  playing=!playing;
-  if(playing){
-    var ov=document.getElementById('pvOverlay');ov.style.opacity='0';ov.style.pointerEvents='none';
-    document.getElementById('pvPlayBtn').innerHTML='&#9646;&#9646;';
-    if(frame>=TOTAL)frame=0;
-    RAF=requestAnimationFrame(loop);
-  }else{
-    document.getElementById('pvPlayBtn').innerHTML='&#9654;';
-    cancelAnimationFrame(RAF);
-  }
-};
-window.pvRestart=function(){
-  if(!CV){CV=document.getElementById('pvCanvas');CX=CV.getContext('2d');}
-  frame=0;cur.x=430;cur.y=260;cur.tx=430;cur.ty=260;playing=true;
-  var ov=document.getElementById('pvOverlay');ov.style.opacity='0';ov.style.pointerEvents='none';
-  document.getElementById('pvPlayBtn').innerHTML='&#9646;&#9646;';
-  cancelAnimationFrame(RAF);RAF=requestAnimationFrame(loop);
-};
-window.pvJump=function(idx){
-  if(!CV){CV=document.getElementById('pvCanvas');CX=CV.getContext('2d');}
-  frame=CH[idx]||0;cur.x=430;cur.y=260;cur.tx=430;cur.ty=260;playing=true;
-  var ov=document.getElementById('pvOverlay');ov.style.opacity='0';ov.style.pointerEvents='none';
-  document.getElementById('pvPlayBtn').innerHTML='&#9646;&#9646;';
-  cancelAnimationFrame(RAF);RAF=requestAnimationFrame(loop);
-};
-window.pvScrub=function(e,el){
-  if(!CV){CV=document.getElementById('pvCanvas');CX=CV.getContext('2d');}
-  var r=el.getBoundingClientRect();
-  frame=Math.floor(((e.clientX-r.left)/r.width)*TOTAL);
-  document.getElementById('pvBar').style.width=((frame/TOTAL)*100)+'%';
-  if(!playing)dispatch(frame);
-};
-window.addEventListener('load',function(){
-  CV=document.getElementById('pvCanvas');CX=CV.getContext('2d');
-  cur.x=430;cur.y=260;cur.tx=430;cur.ty=260;
-  dispatch(0);
-});
-})();
-</script>
 
 
 <!-- CONTACT -->
@@ -1693,43 +748,13 @@ window.addEventListener('load',function(){
         <div class="contact-detail"><div class="contact-detail-icon">✉️</div> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="51383f373e11222534303528323e3f222523243225383e3f7f3834">[email&#160;protected]</a></div>
 
       </div>
-      <div class="contact-form">
-        <h3>Tell Us About Your Project</h3>
-        <div class="form-row">
-          <div class="form-group"><label>Full Name</label><input type="text" placeholder="John Murphy"></div>
-          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+353 87 000 0000"></div>
+      <div class="contact-form" style="display:flex;flex-direction:column;justify-content:center;">
+        <h3>Request a Quote</h3>
+        <p style="font-size:15px;color:var(--gray-600);margin-bottom:24px;line-height:1.6;">Fill in the form below and our team will get back to you within one business day.</p>
+        <div style="width:100%;border-radius:14px;overflow:hidden;min-height:500px;">
+          <iframe data-tally-src="https://tally.so/embed/eqElbE?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Steady Construction — Request a Quote" style="border:none;display:block;"></iframe>
         </div>
-        <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@example.ie"></div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Service Required</label>
-            <select>
-              <option value="">Select a service...</option>
-              <option>General Maintenance</option>
-              <option>Painting &amp; Decorating</option>
-              <option>Carpentry</option>
-              <option>Electrical Services</option>
-              <option>Plumbing</option>
-              <option>Roofing</option>
-              <option>Construction &amp; Renovations</option>
-              <option>Extensions</option>
-              <option>Professional Cleaning</option>
-              <option>Maintenance Contract</option>
-              <option>Multiple / Not Sure</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Property Type</label>
-            <select>
-              <option value="">Select...</option>
-              <option>Residential</option>
-              <option>Commercial</option>
-              <option>Mixed Use</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group"><label>Project Details</label><textarea placeholder="Briefly describe what you need done..."></textarea></div>
-        <button class="form-submit">Send Enquiry →</button>
+        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
       </div>
     </div>
   </div>
@@ -1757,15 +782,18 @@ window.addEventListener('load',function(){
       <h4>Clients</h4>
       <ul>
         <li><a href="#residential">Residential</a></li>
-        <li><a href="#commercial">Commercial</a></li>
+        <li><a href="#residential" onclick="setTimeout(function(){switchTab('commercial-tab');},100)">Commercial</a></li>
         <li><a href="#contracts">Maintenance Contracts</a></li>
-        <li><a href="#contact">Request a Quote</a></li>
+        <li><a href="https://tally.so/r/eqElbE" target="_blank" rel="noopener">Request a Quote</a></li>
       </ul>
     </div>
     <div class="footer-links">
-      <h4>Steady Group</h4>
+      <h4>Contact</h4>
       <ul>
-        <li><a href="#">Steady Yield — Guaranteed Rent</a></li>
+        <li style="font-size:13px;color:var(--gray-400);line-height:1.6;">20 Harcourt Street<br>Dublin 2, D02 H364<br>Ireland</li>
+        <li style="margin-top:10px;"><a href="tel:+353000000000">+353 1 XXX XXXX</a></li>
+        <li><a href="mailto:office@steadyconstruction.ie">office@steadyconstruction.ie</a></li>
+        <li style="margin-top:10px;font-size:13px;color:var(--gray-400);">Service Area: All across Dublin</li>
       </ul>
     </div>
   </div>
@@ -1773,13 +801,21 @@ window.addEventListener('load',function(){
     <span>© 2026 Steady Construction. All rights reserved.</span>
     <span style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
       <span>Fully Registered &amp; Insured in Ireland</span>
-      <span>Dublin, Ireland</span>
+      <span>20 Harcourt Street, Dublin 2</span>
     </span>
     <span style="display:flex;align-items:center;gap:10px;">
       <a href="javascript:void(0)" onclick="openPortal()" style="font-size:13px;color:var(--gray-400);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4601D'" onmouseout="this.style.color='var(--gray-400)'">Client Login</a>
       <span style="color:var(--gray-200);">·</span>
       <a href="javascript:void(0)" onclick="window.openAdminModal()" style="font-size:13px;color:var(--gray-200);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4601D'" onmouseout="this.style.color='var(--gray-200)'">Admin</a>
+      <span style="color:var(--gray-200);">·</span>
+      <a href="javascript:void(0)" onclick="openContractorModal()" style="font-size:13px;color:var(--gray-200);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4601D'" onmouseout="this.style.color='var(--gray-200)'">Contractor Login</a>
     </span>
+  </div>
+  <div style="background:#111;padding:12px 6%;text-align:center;">
+    <p style="font-size:11px;color:rgba(255,255,255,0.28);margin:0;line-height:1.7;">
+      Steady Construction is a trading name of Steady Yield, both registered business names of <strong style="color:rgba(255,255,255,0.4);font-weight:600;">JMAFG Limited</strong>.<br>
+      Registered in Ireland. Registered address: 20 Harcourt Street, Dublin 2, D02 H364.
+    </p>
   </div>
 </footer>
 
@@ -1931,10 +967,26 @@ window.addEventListener('load',function(){
           <textarea id="req-desc" rows="4" placeholder="Describe the issue in as much detail as possible — what happened, when it started, any relevant details..." style="width:100%;border:1px solid #e5e1dd;border-radius:10px;padding:12px 14px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#f7f8fa;resize:vertical;box-sizing:border-box;" onfocus="this.style.borderColor='#D4601D';this.style.background='#fff'" onblur="this.style.borderColor='#e5e1dd';this.style.background='#f7f8fa'"></textarea>
         </div>
 
-        <!-- Access time -->
+        <!-- Occupancy -->
         <div>
-          <label style="font-size:13px;font-weight:600;color:#4a5264;display:block;margin-bottom:6px;">Preferred Access Time</label>
-          <input type="text" id="req-access" placeholder="e.g. Weekday mornings, after 10am" style="width:100%;border:1px solid #e5e1dd;border-radius:10px;padding:12px 14px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#f7f8fa;box-sizing:border-box;" onfocus="this.style.borderColor='#D4601D';this.style.background='#fff'" onblur="this.style.borderColor='#e5e1dd';this.style.background='#f7f8fa'">
+          <label style="font-size:13px;font-weight:600;color:#4a5264;display:block;margin-bottom:6px;">Is the property occupied?</label>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:10px 16px;border:1px solid #e5e1dd;border-radius:9px;flex:1;min-width:140px;background:#f7f8fa;transition:all 0.15s;" id="occ-label-tenant">
+              <input type="radio" name="req-occupancy" value="Tenant in residence" id="occ-tenant" style="accent-color:#D4601D;" onchange="document.getElementById('occ-label-tenant').style.borderColor='#D4601D';document.getElementById('occ-label-tenant').style.background='#fff3ec';document.getElementById('occ-label-vacant').style.borderColor='#e5e1dd';document.getElementById('occ-label-vacant').style.background='#f7f8fa';">
+              <span style="font-size:13px;font-weight:500;color:#1a1a2e;">Tenant in residence</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:10px 16px;border:1px solid #e5e1dd;border-radius:9px;flex:1;min-width:140px;background:#f7f8fa;transition:all 0.15s;" id="occ-label-vacant">
+              <input type="radio" name="req-occupancy" value="Vacant" id="occ-vacant" style="accent-color:#D4601D;" onchange="document.getElementById('occ-label-vacant').style.borderColor='#D4601D';document.getElementById('occ-label-vacant').style.background='#fff3ec';document.getElementById('occ-label-tenant').style.borderColor='#e5e1dd';document.getElementById('occ-label-tenant').style.background='#f7f8fa';">
+              <span style="font-size:13px;font-weight:500;color:#1a1a2e;">Vacant</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Access instructions -->
+        <div>
+          <label style="font-size:13px;font-weight:600;color:#4a5264;display:block;margin-bottom:6px;">Access Instructions</label>
+          <textarea id="req-access" rows="2" placeholder="e.g. Key in lockbox at front door — code 4821. Tenant available after 2pm." style="width:100%;border:1px solid #e5e1dd;border-radius:10px;padding:12px 14px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#f7f8fa;resize:vertical;box-sizing:border-box;" onfocus="this.style.borderColor='#D4601D';this.style.background='#fff'" onblur="this.style.borderColor='#e5e1dd';this.style.background='#f7f8fa'"></textarea>
+          <div style="font-size:11px;color:#9199a8;margin-top:5px;">Key safe codes, who to contact, preferred arrival times</div>
         </div>
 
         <!-- File upload — real input, hidden, triggered by drop zone -->
@@ -2257,7 +1309,7 @@ function buildTicketDetail(t) {
 
   /* Info grid */
   var grid = mkEl('div', 'display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;');
-  [['Contractor',t.contractor],['Scheduled',t.scheduled],['Estimate',t.price],['Occupancy','Tenant in residence'],['Access','Key safe — code 1234'],['Trade',t.type]].forEach(function(inf){
+  [['Contractor',t.contractor||'To be assigned'],['Scheduled',t.scheduled||'To be confirmed'],['Estimate',t.price||'Pending'],['Occupancy',t.occupancy||'Not specified'],['Access',t.accessInstructions||'See ticket notes'],['Trade',t.type]].forEach(function(inf){
     var cell = mkEl('div', 'background:#fff;border-radius:12px;padding:14px 16px;border:1px solid #e5e1dd;');
     cell.appendChild(mkEl('div', 'font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9199a8;margin-bottom:4px;', inf[0]));
     cell.appendChild(mkEl('div', 'font-size:13px;font-weight:600;color:#1a1a2e;', inf[1]));
@@ -2329,6 +1381,13 @@ function buildTicketDetail(t) {
   chatBox.appendChild(chatFoot);
   wrap.appendChild(chatBox);
 
+  /* Cancel ticket section — only show if not completed/closed/cancelled */
+  if (t.status !== 'Completed' && t.status !== 'Closed' && t.status !== 'Cancellation Accepted') {
+    wrap.appendChild(buildCancelSection(t));
+  } else if (t.status === 'Cancellation Requested') {
+    wrap.appendChild(buildCancelSection(t));
+  }
+
   /* Payment section */
   wrap.appendChild(buildPaymentSection(t));
   setTimeout(function(){ chatThread.scrollTop = chatThread.scrollHeight; }, 50);
@@ -2343,16 +1402,34 @@ function appendMessages(thread, messages) {
   messages.forEach(function(m) {
     if (m.from === 'system') {
       var sys = mkEl('div', 'text-align:center;margin:8px 0;');
-      sys.appendChild(mkEl('span', 'font-size:11px;color:#9199a8;background:#f0f1f3;padding:3px 12px;border-radius:100px;', m.text + ' · ' + m.time));
+      sys.appendChild(mkEl('span', 'font-size:11px;color:#9199a8;background:#f0f1f3;padding:3px 12px;border-radius:100px;', m.text + ' - ' + m.time));
       thread.appendChild(sys);
+    } else if (m.from === 'photo') {
+      var row = mkEl('div', 'display:flex;justify-content:flex-end;margin-bottom:12px;');
+      var bubble = mkEl('div', 'max-width:72%;background:#fff;border:1px solid #e5e1dd;border-radius:14px 14px 4px 14px;padding:10px 14px;');
+      bubble.appendChild(mkEl('div', 'font-size:12px;color:#9199a8;margin-bottom:6px;', 'Photo attached'));
+      var chip = mkEl('div', 'background:#eff6ff;border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:8px;');
+      chip.appendChild(mkEl('div', 'width:28px;height:28px;background:#2563eb;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0;', 'IMG'));
+      chip.appendChild(mkEl('div', 'font-size:12px;font-weight:500;color:#1a1a2e;', m.text));
+      bubble.appendChild(chip);
+      if (m.fileObj) {
+        try {
+          var img = document.createElement('img');
+          img.src = URL.createObjectURL(m.fileObj); img.alt = m.text;
+          img.style.cssText = 'width:100%;max-width:220px;border-radius:8px;margin-top:6px;display:block;cursor:pointer;';
+          img.onclick = function() { window.open(img.src, '_blank'); };
+          bubble.appendChild(img);
+        } catch(e) {}
+      }
+      bubble.appendChild(mkEl('div', 'font-size:11px;color:#9199a8;margin-top:6px;', (m.name||'You') + ' - ' + m.time));
+      row.appendChild(bubble); thread.appendChild(row);
     } else {
       var isClient = m.from === 'client';
-      var row = mkEl('div', 'display:flex;' + (isClient?'justify-content:flex-end;':'') + 'margin-bottom:12px;');
-      var bubble = mkEl('div', 'max-width:72%;background:'+(isClient?'#D4601D':'#fff')+';color:'+(isClient?'#fff':'#1a1a2e')+';border-radius:'+(isClient?'14px 14px 4px 14px':'14px 14px 14px 4px')+';padding:12px 16px;border:'+(isClient?'none':'1px solid #e5e1dd')+';');
-      bubble.appendChild(mkEl('div', 'font-size:13px;line-height:1.5;', m.text));
-      bubble.appendChild(mkEl('div', 'font-size:11px;'+(isClient?'color:rgba(255,255,255,0.65)':'color:#9199a8')+';margin-top:6px;', (m.name||m.from) + ' · ' + m.time));
-      row.appendChild(bubble);
-      thread.appendChild(row);
+      var row2 = mkEl('div', 'display:flex;' + (isClient ? 'justify-content:flex-end;' : '') + 'margin-bottom:12px;');
+      var bubble2 = mkEl('div', 'max-width:72%;background:'+(isClient?'#D4601D':'#fff')+';color:'+(isClient?'#fff':'#1a1a2e')+';border-radius:'+(isClient?'14px 14px 4px 14px':'14px 14px 14px 4px')+';padding:12px 16px;border:'+(isClient?'none':'1px solid #e5e1dd')+';');
+      bubble2.appendChild(mkEl('div', 'font-size:13px;line-height:1.5;', m.text));
+      bubble2.appendChild(mkEl('div', 'font-size:11px;'+(isClient?'color:rgba(255,255,255,0.65)':'color:#9199a8')+';margin-top:6px;', (m.name||m.from) + ' - ' + m.time));
+      row2.appendChild(bubble2); thread.appendChild(row2);
     }
   });
 }
@@ -2594,7 +1671,6 @@ function submitNewRequest() {
   var address = (document.getElementById('req-address') || {}).value || '';
   var desc = (document.getElementById('req-desc') || {}).value || '';
 
-  /* Basic validation */
   if (!address.trim()) {
     var addrInput = document.getElementById('req-address');
     if (addrInput) { addrInput.style.borderColor = '#dc2626'; addrInput.focus(); addrInput.placeholder = 'Please enter the property address'; }
@@ -2609,28 +1685,59 @@ function submitNewRequest() {
   var ref = 'SC-2026-0' + String(Math.floor(Math.random()*90)+10);
   var service = (document.getElementById('req-service') || {}).value || 'General';
   var priority = (document.getElementById('req-priority') || {}).value || 'Standard';
+  var accessText = (document.getElementById('req-access') || {}).value || '';
+  var occRadio = document.querySelector('input[name="req-occupancy"]:checked');
+  var occupancy = occRadio ? occRadio.value : 'Not specified';
+  var now = new Date();
+  var timeStr = now.getHours() + ':' + String(now.getMinutes()).padStart(2,'0');
 
-  /* Add to portalTickets so it shows in the Tickets tab */
+  /* Build initial messages — include uploaded photos */
+  var initMessages = [
+    { from:'system', text:'Ticket ' + ref + ' created. Team notified.', time: timeStr }
+  ];
+
+  /* Add details summary message */
+  var detailText = 'Occupancy: ' + occupancy + (accessText ? ' | Access: ' + accessText : '');
+  initMessages.push({ from:'client', text: detailText, time: timeStr, name:'You' });
+
+  /* Add photo messages into the chat thread */
+  uploadedFiles.forEach(function(file, i) {
+    initMessages.push({
+      from: 'photo',
+      text: file.name,
+      fileObj: file,
+      time: timeStr,
+      name: 'You'
+    });
+  });
+
   portalTickets.unshift({
     ref: ref, type: service, priority: priority,
     address: address.trim(),
     desc: desc.trim(),
+    occupancy: occupancy,
+    accessInstructions: accessText.trim(),
     status: 'Pending', contractor: '', scheduled: 'To be confirmed',
     price: 'Pending quote', paid: false, payRef: '', payStatus: 'Awaiting Payment',
     progress: 0,
-    messages: [{ from: 'system', text: 'Ticket ' + ref + ' created. Team notified.', time: 'Just now' }]
+    messages: initMessages,
+    cancelRequest: null  /* { reason, status: 'Pending Review' | 'Accepted' | 'Rejected', adminComment } */
   });
 
-  /* Show success */
   var msg = document.getElementById('new-req-success');
   if (msg) {
     msg.style.display = 'block';
     msg.textContent = 'Request submitted — Reference: ' + ref + '. Your team will be in touch shortly to confirm.';
   }
 
-  /* Reset form */
   ['req-address','req-desc','req-access'].forEach(function(id) {
     var el = document.getElementById(id); if (el) { el.value = ''; el.style.borderColor = '#e5e1dd'; }
+  });
+  /* Reset occupancy radio */
+  document.querySelectorAll('input[name="req-occupancy"]').forEach(function(r){ r.checked = false; });
+  ['occ-label-tenant','occ-label-vacant'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){ el.style.borderColor='#e5e1dd'; el.style.background='#f7f8fa'; }
   });
   var fileList = document.getElementById('req-file-list');
   if (fileList) fileList.innerHTML = '';
@@ -2643,13 +1750,81 @@ function submitNewRequest() {
     if (inner) inner.textContent = 'Click to choose files or drag and drop here';
   }
 
-  /* Update dashboard */
   renderDashboard();
+  setTimeout(function() { var m = document.getElementById('new-req-success'); if (m) m.style.display = 'none'; }, 10000);
+}
 
-  setTimeout(function() {
-    var m = document.getElementById('new-req-success');
-    if (m) m.style.display = 'none';
-  }, 10000);
+/* ── CANCEL TICKET ── */
+function buildCancelSection(t) {
+  var wrap = mkEl('div', 'margin-top:8px;');
+
+  if (t.cancelRequest) {
+    var cr = t.cancelRequest;
+    var isPending = cr.status === 'Pending Review';
+    var isAccepted = cr.status === 'Accepted';
+    var isRejected = cr.status === 'Rejected';
+    var bgCol = isPending ? '#f5f3ff' : isAccepted ? '#f0fdf4' : '#fff3ec';
+    var bdCol = isPending ? '#7c3aed' : isAccepted ? '#16a34a' : '#D4601D';
+    var txCol = isPending ? '#7c3aed' : isAccepted ? '#16a34a' : '#D4601D';
+    var box = mkEl('div', 'background:'+bgCol+';border:1.5px solid '+bdCol+';border-radius:14px;padding:18px 20px;');
+    box.appendChild(mkEl('div', 'font-size:13px;font-weight:700;color:'+txCol+';margin-bottom:6px;',
+      isPending ? 'Cancellation Request — Under Review' :
+      isAccepted ? 'Cancellation Accepted' : 'Cancellation Request Declined'));
+    box.appendChild(mkEl('div', 'font-size:13px;color:#4a5264;margin-bottom:4px;', 'Your reason: ' + cr.reason));
+    if (cr.adminComment) {
+      box.appendChild(mkEl('div', 'font-size:13px;color:#4a5264;margin-top:6px;padding-top:6px;border-top:1px solid '+bdCol+';opacity:0.7;',
+        'Admin note: ' + cr.adminComment));
+    }
+    if (isPending) {
+      box.appendChild(mkEl('div', 'font-size:12px;color:#9199a8;margin-top:8px;', 'Our team will review this shortly and be in touch.'));
+    }
+    wrap.appendChild(box);
+  } else {
+    /* Show cancel button */
+    var canBtn = mkEl('button', 'background:none;border:1px solid #e5e1dd;color:#9199a8;padding:8px 18px;border-radius:8px;font-size:13px;cursor:pointer;font-family:"DM Sans",sans-serif;', 'Request Cancellation');
+    canBtn.addEventListener('mouseover', function(){ canBtn.style.borderColor='#dc2626'; canBtn.style.color='#dc2626'; });
+    canBtn.addEventListener('mouseout',  function(){ canBtn.style.borderColor='#e5e1dd'; canBtn.style.color='#9199a8'; });
+    canBtn.addEventListener('click', function() { showCancelForm(t.ref, wrap, canBtn); });
+    wrap.appendChild(canBtn);
+  }
+  return wrap;
+}
+
+function showCancelForm(ref, wrap, canBtn) {
+  canBtn.style.display = 'none';
+  var form = mkEl('div', 'background:#fef2f2;border:1.5px solid #dc2626;border-radius:14px;padding:18px 20px;margin-top:4px;');
+  form.appendChild(mkEl('div', 'font-size:13px;font-weight:700;color:#dc2626;margin-bottom:10px;', 'Request Ticket Cancellation'));
+  form.appendChild(mkEl('div', 'font-size:13px;color:#4a5264;margin-bottom:10px;line-height:1.5;', 'Please tell us why you no longer need this job. Our team will review and confirm.'));
+  var textarea = document.createElement('textarea');
+  textarea.rows = 3; textarea.placeholder = 'Reason for cancellation...';
+  textarea.style.cssText = 'width:100%;border:1px solid #fca5a5;border-radius:8px;padding:10px 12px;font-size:13px;font-family:"DM Sans",sans-serif;outline:none;background:#fff;resize:vertical;box-sizing:border-box;margin-bottom:10px;';
+  textarea.addEventListener('focus', function(){ textarea.style.borderColor='#dc2626'; });
+  form.appendChild(textarea);
+  var row = mkEl('div', 'display:flex;gap:10px;');
+  var submitBtn = mkEl('button', 'background:#dc2626;color:#fff;border:none;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:"DM Sans",sans-serif;', 'Submit Request');
+  submitBtn.addEventListener('click', function() {
+    var reason = textarea.value.trim();
+    if (!reason) { textarea.style.borderColor='#dc2626'; textarea.focus(); return; }
+    requestCancellation(ref, reason);
+    openTicketDetail(ref); /* re-render */
+  });
+  var cancelBtn = mkEl('button', 'background:#f0f1f3;color:#4a5264;border:none;padding:9px 20px;border-radius:8px;font-size:13px;cursor:pointer;font-family:"DM Sans",sans-serif;', 'Never mind');
+  cancelBtn.addEventListener('click', function() { form.remove(); canBtn.style.display=''; });
+  row.appendChild(submitBtn); row.appendChild(cancelBtn);
+  form.appendChild(row);
+  wrap.appendChild(form);
+}
+
+function requestCancellation(ref, reason) {
+  var t = portalTickets.find(function(x){ return x.ref===ref; });
+  if (!t) return;
+  t.cancelRequest = { reason: reason, status: 'Pending Review', adminComment: '' };
+  t.status = 'Cancellation Requested';
+  /* Sync to admin */
+  if (typeof adminTickets !== 'undefined') {
+    var at = adminTickets.find(function(x){ return x.ref===ref; });
+    if (at) { at.cancelRequest = t.cancelRequest; at.status = 'Cancellation Requested'; }
+  }
 }
 
 /* ── EXPOSE GLOBALS ── */
@@ -2723,71 +1898,91 @@ window.submitNewRequest = submitNewRequest;
   </div>
 
   <!-- OVERVIEW TAB -->
-  <div id="admin-a-overview" style="padding:28px 24px;max-width:1200px;margin:0 auto;">
+  <div id="admin-a-overview" style="padding:28px 24px;max-width:1400px;margin:0 auto;">
     <div style="margin-bottom:24px;">
       <h2 style="font-size:22px;color:var(--navy);margin-bottom:4px;">Operations Dashboard</h2>
-      <p style="font-size:14px;color:var(--gray-600);">Wednesday 18 March 2026 — All systems operational</p>
+      <p style="font-size:14px;color:var(--gray-600);">Live overview of all tickets — click any card to open and edit</p>
     </div>
-    <!-- KPI Stats -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:28px;">
-      <div style="background:#fff;border-radius:14px;padding:18px 20px;border:1px solid var(--gray-200);">
-        <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">Active Tickets</div>
-        <div style="font-size:30px;font-family:'DM Serif Display',serif;color:var(--navy);">8</div>
-        <div style="font-size:12px;color:#16a34a;margin-top:2px;">↑ 2 this week</div>
-      </div>
-      <div style="background:#fff;border-radius:14px;padding:18px 20px;border:1px solid var(--gray-200);">
-        <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">Urgent Jobs</div>
-        <div style="font-size:30px;font-family:'DM Serif Display',serif;color:#D4601D;">2</div>
-        <div style="font-size:12px;color:var(--gray-400);margin-top:2px;">Needs attention</div>
-      </div>
-      <div style="background:#fff;border-radius:14px;padding:18px 20px;border:1px solid var(--gray-200);">
-        <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">In Progress</div>
-        <div style="font-size:30px;font-family:'DM Serif Display',serif;color:var(--navy);">3</div>
-        <div style="font-size:12px;color:var(--gray-400);margin-top:2px;">On site today</div>
-      </div>
-      <div style="background:#fff;border-radius:14px;padding:18px 20px;border:1px solid var(--gray-200);">
-        <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">Completed</div>
-        <div style="font-size:30px;font-family:'DM Serif Display',serif;color:var(--navy);">24</div>
-        <div style="font-size:12px;color:#16a34a;margin-top:2px;">This month</div>
-      </div>
-      <div style="background:#fff;border-radius:14px;padding:18px 20px;border:1px solid var(--gray-200);">
-        <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">Outstanding</div>
-        <div style="font-size:30px;font-family:'DM Serif Display',serif;color:#D4601D;">€760</div>
-        <div style="font-size:12px;color:var(--gray-400);margin-top:2px;">2 invoices unpaid</div>
-      </div>
-      <div style="background:#fff;border-radius:14px;padding:18px 20px;border:1px solid var(--gray-200);">
-        <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">Active Clients</div>
-        <div style="font-size:30px;font-family:'DM Serif Display',serif;color:var(--navy);">12</div>
-        <div style="font-size:12px;color:var(--gray-400);margin-top:2px;">3 properties each avg</div>
-      </div>
-    </div>
-    <!-- Urgent tickets -->
-    <h3 style="font-size:16px;color:var(--navy);margin-bottom:12px;">⚠️ Urgent — Needs Action</h3>
-    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px;">
-      <div style="background:#fff;border-radius:12px;padding:18px 20px;border-left:4px solid #D4601D;border:1px solid #fde8d8;border-left:4px solid #D4601D;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;cursor:pointer;" onclick="openAdminTicket('SC-2024-041')">
-        <div>
-          <div style="font-size:12px;color:#D4601D;font-weight:600;margin-bottom:2px;">#SC-2024-041 · URGENT · Plumbing</div>
-          <div style="font-size:14px;font-weight:600;color:var(--navy);">Bathroom leak — 14 Maple St, Dublin 6</div>
-          <div style="font-size:13px;color:var(--gray-600);margin-top:2px;">Client: John Murphy · Contractor: Ciarán O'Brien · In Progress</div>
-        </div>
-        <button onclick="event.stopPropagation();openAdminTicket('SC-2024-041')" style="background:#D4601D;color:#fff;border:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">Manage →</button>
-      </div>
-      <div style="background:#fff;border-radius:12px;padding:18px 20px;border-left:4px solid #D4601D;border:1px solid #fde8d8;border-left:4px solid #D4601D;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;cursor:pointer;" onclick="openAdminTicket('SC-2024-043')">
-        <div>
-          <div style="font-size:12px;color:#D4601D;font-weight:600;margin-bottom:2px;">#SC-2024-043 · URGENT · Electrical</div>
-          <div style="font-size:14px;font-weight:600;color:var(--navy);">Power outage — 5 Harbour View, Dublin 2</div>
-          <div style="font-size:13px;color:var(--gray-600);margin-top:2px;">Client: Mary O'Sullivan · No contractor assigned yet</div>
-        </div>
-        <button onclick="event.stopPropagation();openAdminTicket('SC-2024-043')" style="background:#D4601D;color:#fff;border:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">Assign →</button>
-      </div>
-    </div>
-    <!-- Activity log -->
-    <h3 style="font-size:16px;color:var(--navy);margin-bottom:12px;">Recent Activity</h3>
-    <div style="background:#fff;border-radius:12px;border:1px solid var(--gray-200);overflow:hidden;">
-      <div id="admin-activity-log"></div>
-    </div>
-  </div>
 
+    <!-- KPI row -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:28px;">
+      <div style="background:#fff;border-radius:12px;padding:16px 18px;border:1px solid #e5e1dd;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9199a8;margin-bottom:6px;">Active</div>
+        <div id="kpi-admin-active" style="font-size:28px;font-family:'DM Serif Display',serif;color:#1a1a2e;">6</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:16px 18px;border:1px solid #e5e1dd;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9199a8;margin-bottom:6px;">Urgent</div>
+        <div id="kpi-admin-urgent" style="font-size:28px;font-family:'DM Serif Display',serif;color:#dc2626;">2</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:16px 18px;border:1px solid #e5e1dd;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9199a8;margin-bottom:6px;">In Progress</div>
+        <div id="kpi-admin-inprog" style="font-size:28px;font-family:'DM Serif Display',serif;color:#D4601D;">1</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:16px 18px;border:1px solid #e5e1dd;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9199a8;margin-bottom:6px;">Completed</div>
+        <div id="kpi-admin-completed" style="font-size:28px;font-family:'DM Serif Display',serif;color:#16a34a;">2</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:16px 18px;border:1px solid #e5e1dd;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9199a8;margin-bottom:6px;">Unpaid</div>
+        <div id="kpi-admin-unpaid" style="font-size:28px;font-family:'DM Serif Display',serif;color:#d97706;">3</div>
+      </div>
+    </div>
+
+    <!-- Sectioned ticket boards -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:32px;">
+
+      <!-- Waiting to be Assigned -->
+      <div style="background:#fffbeb;border-radius:14px;border:1px solid #fde68a;overflow:hidden;">
+        <div style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #fde68a;">
+          <div style="font-size:13px;font-weight:700;color:#d97706;">Waiting to Assign</div>
+          <span id="ov-pending-count" style="background:#d97706;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:100px;">0</span>
+        </div>
+        <div id="ov-pending" style="padding:10px;max-height:300px;overflow-y:auto;"></div>
+      </div>
+
+      <!-- Assigned -->
+      <div style="background:#f5f3ff;border-radius:14px;border:1px solid #c4b5fd;overflow:hidden;">
+        <div style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c4b5fd;">
+          <div style="font-size:13px;font-weight:700;color:#7c3aed;">Assigned</div>
+          <span id="ov-assigned-count" style="background:#7c3aed;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:100px;">0</span>
+        </div>
+        <div id="ov-assigned" style="padding:10px;max-height:300px;overflow-y:auto;"></div>
+      </div>
+
+      <!-- In Progress / Scheduled -->
+      <div style="background:#fff3ec;border-radius:14px;border:1px solid #fed7aa;overflow:hidden;">
+        <div style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #fed7aa;">
+          <div style="font-size:13px;font-weight:700;color:#D4601D;">In Progress</div>
+          <span id="ov-inprogress-count" style="background:#D4601D;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:100px;">0</span>
+        </div>
+        <div id="ov-inprogress" style="padding:10px;max-height:300px;overflow-y:auto;"></div>
+      </div>
+
+      <!-- Completed -->
+      <div style="background:#f0fdf4;border-radius:14px;border:1px solid #bbf7d0;overflow:hidden;">
+        <div style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #bbf7d0;">
+          <div style="font-size:13px;font-weight:700;color:#16a34a;">Completed</div>
+          <span id="ov-completed-count" style="background:#16a34a;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:100px;">0</span>
+        </div>
+        <div id="ov-completed" style="padding:10px;max-height:300px;overflow-y:auto;"></div>
+      </div>
+
+      <!-- Cancellation Requests -->
+      <div style="background:#fef2f2;border-radius:14px;border:1px solid #fca5a5;overflow:hidden;">
+        <div style="padding:14px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #fca5a5;">
+          <div style="font-size:13px;font-weight:700;color:#dc2626;">Cancellations</div>
+          <span id="ov-cancel-count" style="background:#dc2626;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:100px;">0</span>
+        </div>
+        <div id="ov-cancel" style="padding:10px;max-height:300px;overflow-y:auto;"></div>
+      </div>
+
+    </div>
+
+    <!-- Recent activity log -->
+    <div style="font-size:14px;font-weight:700;color:#1a1a2e;margin-bottom:12px;">Recent Activity</div>
+    <div style="background:#fff;border-radius:14px;border:1px solid #e5e1dd;overflow:hidden;" id="admin-activity-log"></div>
+
+  </div>
   <!-- ALL TICKETS TAB -->
   <div id="admin-a-tickets" style="display:none;padding:28px 24px;max-width:1200px;margin:0 auto;">
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
@@ -2813,8 +2008,12 @@ window.submitNewRequest = submitNewRequest;
   <!-- CLIENTS TAB -->
   <div id="admin-a-clients" style="display:none;padding:28px 24px;max-width:1200px;margin:0 auto;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
-      <h2 style="font-size:22px;color:var(--navy);">Client Accounts</h2>
-      <button onclick="openNewClientForm()" style="background:#D4601D;color:#fff;border:none;padding:10px 20px;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">+ Create Client</button>
+      <div>
+        <h2 style="font-size:22px;color:var(--navy);margin-bottom:4px;">Client Accounts</h2>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+        <input id="client-email-search" type="text" placeholder="Search by name or email..." oninput="renderAdminClients()" style="border:1px solid #e5e1dd;border-radius:8px;padding:8px 14px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;width:240px;" onfocus="this.style.borderColor='#D4601D'" onblur="this.style.borderColor='#e5e1dd'">
+        <button onclick="openNewClientForm()" style="background:#D4601D;color:#fff;border:none;padding:10px 20px;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">+ Create Client</button>
     </div>
     <!-- New Client Form -->
     <div id="new-client-form" style="display:none;background:#fff;border-radius:14px;padding:24px;border:1px solid var(--gray-200);margin-bottom:20px;">
@@ -2893,23 +2092,24 @@ window.submitNewRequest = submitNewRequest;
 var adminTickets = [
   { ref:'SC-2024-043', client:'Mary OSullivan', address:'5 Harbour View, Dublin 2', type:'Electrical',
     desc:'Total power outage on ground floor. No power to sockets or lighting. Fuse box tripped repeatedly.',
-    status:'Pending', priority:'Urgent', contractor:'', scheduled:'', price:'', paid:false, messages:[] },
+    status:'Pending', priority:'Urgent', contractor:'', scheduled:'', price:'', paid:false, messages:[], contractorMessages:[] },
   { ref:'SC-2024-041', client:'John Murphy', address:'14 Maple St, Dublin 6', type:'Plumbing',
     desc:'Leak under bathroom sink — water dripping from waste pipe.',
     status:'In Progress', priority:'Urgent', contractor:'Ciaran OBrien', scheduled:'Today 2:00 PM', price:'EUR 320', paid:false,
-    messages:[{from:'team', text:'Ciaran on site — faulty waste trap identified. Replacing now.', time:'2:15 PM', name:'Steady Team'}] },
+    messages:[{from:'team', text:'Ciaran on site — faulty waste trap identified. Replacing now.', time:'2:15 PM', name:'Steady Team'}],
+    contractorMessages:[{from:'contractor', text:'On site now. Waste trap is cracked — replacing it. Have the part in the van.', time:'2:10 PM', name:'Ciaran OBrien'},{from:'admin', text:'Great, let us know when done and send before/after photos please.', time:'2:12 PM', name:'Admin'}] },
   { ref:'SC-2024-042', client:'David Walsh', address:'33 Lakeview Drive, Dublin 14', type:'Carpentry',
     desc:'Kitchen cabinet doors warped. 4 doors need replacing. Hinges also loose.',
-    status:'Scheduled', priority:'Standard', contractor:'Padraig Doyle', scheduled:'Fri 20 Mar, 10:00 AM', price:'EUR 280', paid:false, messages:[] },
+    status:'Scheduled', priority:'Standard', contractor:'Padraig Doyle', scheduled:'Fri 20 Mar, 10:00 AM', price:'EUR 280', paid:false, messages:[], contractorMessages:[] },
   { ref:'SC-2024-039', client:'John Murphy', address:'8 Orchard Rd, Dublin 4', type:'Cleaning',
     desc:'End-of-tenancy deep clean. 3-bed apartment.',
-    status:'Scheduled', priority:'Standard', contractor:'Cleaning Team', scheduled:'Thu 18 Mar, 9:00 AM', price:'EUR 280', paid:false, messages:[] },
+    status:'Scheduled', priority:'Standard', contractor:'Cleaning Team', scheduled:'Thu 18 Mar, 9:00 AM', price:'EUR 280', paid:false, messages:[], contractorMessages:[] },
   { ref:'SC-2024-037', client:'John Murphy', address:'22 Pine Ave, Dublin 4', type:'Electrical',
     desc:'Full consumer unit upgrade — outdated fuse box replaced with modern RCD board.',
-    status:'Completed', priority:'Standard', contractor:'Declan Byrne', scheduled:'10 Mar 2026', price:'EUR 480', paid:false, messages:[] },
+    status:'Completed', priority:'Standard', contractor:'Declan Byrne', scheduled:'10 Mar 2026', price:'EUR 480', paid:false, messages:[], contractorMessages:[] },
   { ref:'SC-2024-031', client:'John Murphy', address:'14 Maple St, Dublin 6', type:'Roofing',
     desc:'Roof repair — several slates displaced after storm damage.',
-    status:'Completed', priority:'Urgent', contractor:'Roofing Team', scheduled:'22 Feb 2026', price:'EUR 1,250', paid:true, messages:[] }
+    status:'Completed', priority:'Urgent', contractor:'Roofing Team', scheduled:'22 Feb 2026', price:'EUR 1,250', paid:true, messages:[], contractorMessages:[] }
 ];
 
 var adminClients = [
@@ -2995,6 +2195,16 @@ window.addEventListener('load', function() {
 
 /* ── INIT ── */
 function initAdminDashboard() {
+  switchAdminTab('a-overview');
+  renderAdminOverview();
+  renderAdminTickets();
+  renderAdminClients();
+  renderContractorCards();
+  renderAdminPayments();
+}
+
+/* ── OVERVIEW (sectioned by status) ── */
+function renderAdminOverview() {
   var logEl = document.getElementById('admin-activity-log');
   if (logEl) {
     logEl.innerHTML = '';
@@ -3008,12 +2218,66 @@ function initAdminDashboard() {
       logEl.appendChild(row);
     });
   }
-  switchAdminTab('a-overview');
-  renderAdminTickets();
-  renderAdminClients();
-  renderContractorCards();
-  renderAdminPayments();
+
+  /* Render sectioned ticket boards */
+  var sections = [
+    { id:'ov-pending',    label:'Waiting to be Assigned', statuses:['Pending'], col:'#d97706', bg:'#fffbeb' },
+    { id:'ov-assigned',   label:'Assigned',               statuses:['Assigned'], col:'#7c3aed', bg:'#f5f3ff' },
+    { id:'ov-inprogress', label:'In Progress',             statuses:['In Progress','Scheduled'], col:'#D4601D', bg:'#fff3ec' },
+    { id:'ov-completed',  label:'Completed',               statuses:['Completed'], col:'#16a34a', bg:'#f0fdf4' },
+    { id:'ov-cancel',     label:'Cancellation Requests',   statuses:['Cancellation Requested'], col:'#dc2626', bg:'#fef2f2' }
+  ];
+
+  sections.forEach(function(sec) {
+    var container = document.getElementById(sec.id);
+    if (!container) return;
+    container.innerHTML = '';
+    var tickets = adminTickets.filter(function(t) { return sec.statuses.indexOf(t.status) !== -1; });
+
+    /* Update count badge */
+    var badge = document.getElementById(sec.id + '-count');
+    if (badge) badge.textContent = tickets.length;
+
+    if (!tickets.length) {
+      container.appendChild(aEl('div', 'padding:16px;text-align:center;color:#9199a8;font-size:13px;', 'No tickets in this section.'));
+      return;
+    }
+    tickets.forEach(function(t) {
+      var card = aEl('div', 'background:#fff;border-radius:10px;padding:14px 16px;border:1px solid #e5e1dd;margin-bottom:8px;cursor:pointer;');
+      card.addEventListener('mouseover', function(){ card.style.borderColor=sec.col; });
+      card.addEventListener('mouseout',  function(){ card.style.borderColor='#e5e1dd'; });
+      card.addEventListener('click', function(){ switchAdminTab('a-tickets'); openAdminTicket(t.ref); });
+
+      var top = aEl('div', 'display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;');
+      var refEl = aEl('span', 'font-size:11px;font-weight:700;color:#9199a8;', t.ref);
+      var priEl = aEl('span', 'font-size:10px;font-weight:600;padding:2px 8px;border-radius:100px;background:'+(t.priority==='Urgent'?'#fef2f2':'#f0f1f3')+';color:'+(t.priority==='Urgent'?'#dc2626':'#9199a8')+';', t.priority);
+      top.appendChild(refEl); top.appendChild(priEl);
+      card.appendChild(top);
+      card.appendChild(aEl('div', 'font-size:13px;font-weight:600;color:#1a1a2e;margin-bottom:2px;', t.type + ' — ' + t.address.substring(0,30)+'...'));
+      card.appendChild(aEl('div', 'font-size:12px;color:#9199a8;', t.client + (t.contractor ? ' · ' + t.contractor : '')));
+      if (t.cancelRequest && t.cancelRequest.status === 'Pending Review') {
+        var cancBadge = aEl('div', 'margin-top:6px;background:#fef2f2;border-radius:6px;padding:4px 8px;font-size:11px;color:#dc2626;font-weight:600;display:inline-block;', 'Cancellation Requested');
+        card.appendChild(cancBadge);
+      }
+      container.appendChild(card);
+    });
+  });
+
+  /* Update KPI numbers */
+  var kpiMap = {
+    'kpi-admin-active':    adminTickets.filter(function(t){ return t.status!=='Completed'&&t.status!=='Closed'; }).length,
+    'kpi-admin-urgent':    adminTickets.filter(function(t){ return t.priority==='Urgent'&&t.status!=='Completed'; }).length,
+    'kpi-admin-inprog':    adminTickets.filter(function(t){ return t.status==='In Progress'; }).length,
+    'kpi-admin-completed': adminTickets.filter(function(t){ return t.status==='Completed'; }).length,
+    'kpi-admin-unpaid':    adminTickets.filter(function(t){ return t.price&&!t.paid; }).length
+  };
+  Object.keys(kpiMap).forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = kpiMap[id];
+  });
 }
+
+
 
 /* ── TABS ── */
 function switchAdminTab(tab) {
@@ -3106,7 +2370,7 @@ function openAdminTicket(ref) {
   var ss = document.createElement('select');
   ss.id = 'et-status';
   ss.style.cssText = 'width:100%;border:1px solid #e5e1dd;border-radius:9px;padding:11px 14px;font-size:14px;font-family:"DM Sans",sans-serif;outline:none;background:#fff;cursor:pointer;box-sizing:border-box;';
-  ['Pending','Assigned','Scheduled','In Progress','Completed','Awaiting Payment','Closed'].forEach(function(s) {
+  ['Pending','Assigned','Scheduled','In Progress','Completed','Cancellation Requested','Closed'].forEach(function(s) {
     var o = document.createElement('option'); o.value = s; o.textContent = s;
     if (t.status === s) o.selected = true;
     ss.appendChild(o);
@@ -3215,6 +2479,90 @@ function openAdminTicket(ref) {
   chatBox.appendChild(chatFoot);
   panelContent.appendChild(chatBox);
 
+  /* ── Contractor Chat (admin side) ── */
+  var cChatBox = aEl('div', 'border:1px solid #e5e1dd;border-radius:14px;overflow:hidden;margin-top:16px;');
+  var cChatHdr = aEl('div', 'padding:16px 20px;border-bottom:1px solid #f0f1f3;background:#1a1a2e;');
+  cChatHdr.appendChild(aEl('div', 'font-size:14px;font-weight:700;color:#fff;', 'Contractor Chat — ' + (t.contractor || 'No contractor assigned')));
+  cChatHdr.appendChild(aEl('div', 'font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;', 'Private channel between admin and contractor. Client cannot see this.'));
+  cChatBox.appendChild(cChatHdr);
+
+  var cThread = aEl('div', 'padding:16px 20px;background:#f7f8fa;min-height:60px;max-height:240px;overflow-y:auto;');
+  cThread.id = 'admin-contractor-chat-' + ref;
+  var cMsgs = t.contractorMessages || [];
+  if (!cMsgs.length) {
+    cThread.appendChild(aEl('div', 'text-align:center;color:#9199a8;font-size:13px;padding:16px 0;', 'No contractor messages yet.'));
+  } else {
+    cMsgs.forEach(function(m) {
+      var isAdmin = m.from === 'admin';
+      var row = aEl('div', 'display:flex;'+(isAdmin?'justify-content:flex-end;':'')+'margin-bottom:8px;');
+      var bubble = aEl('div', 'max-width:72%;background:'+(isAdmin?'#1a1a2e':'#fff')+';color:'+(isAdmin?'#fff':'#1a1a2e')+';border-radius:'+(isAdmin?'12px 12px 4px 12px':'12px 12px 12px 4px')+';padding:9px 13px;font-size:13px;line-height:1.4;border:'+(isAdmin?'none':'1px solid #e5e1dd')+';');
+      bubble.appendChild(aEl('div', '', m.text));
+      bubble.appendChild(aEl('div', 'font-size:11px;'+(isAdmin?'color:rgba(255,255,255,0.5)':'color:#9199a8')+';margin-top:4px;', (m.name||m.from)+' - '+m.time));
+      row.appendChild(bubble); cThread.appendChild(row);
+    });
+  }
+  cChatBox.appendChild(cThread);
+
+  var cFoot = aEl('div', 'padding:12px 14px;border-top:1px solid #f0f1f3;background:#fff;display:flex;gap:8px;');
+  var cInput = document.createElement('input');
+  cInput.type = 'text'; cInput.id = 'admin-contractor-msg-'+ref; cInput.placeholder = 'Message to contractor...';
+  cInput.style.cssText = 'flex:1;border:1px solid #e5e1dd;border-radius:8px;padding:9px 13px;font-size:13px;font-family:"DM Sans",sans-serif;outline:none;';
+  cInput.addEventListener('focus', function(){ cInput.style.borderColor='#1a1a2e'; });
+  cInput.addEventListener('blur',  function(){ cInput.style.borderColor='#e5e1dd'; });
+  cInput.addEventListener('keydown', function(e){ if(e.key==='Enter') sendAdminContractorMsg(ref); });
+  var cSendBtn = aEl('button', 'background:#1a1a2e;color:#fff;border:none;padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:"DM Sans",sans-serif;', 'Send');
+  cSendBtn.addEventListener('click', function(){ sendAdminContractorMsg(ref); });
+  cFoot.appendChild(cInput); cFoot.appendChild(cSendBtn);
+  cChatBox.appendChild(cFoot);
+  panelContent.appendChild(cChatBox);
+
+  /* ── Mark as Done button (admin marks job complete) ── */
+  if (t.status !== 'Completed' && t.status !== 'Closed') {
+    var doneWrap = aEl('div', 'margin-top:16px;padding:16px 20px;background:#f0fdf4;border:1.5px solid #16a34a;border-radius:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;');
+    doneWrap.appendChild(aEl('div', 'font-size:13px;color:#16a34a;font-weight:600;', 'Mark this job as complete when all work is finished and signed off.'));
+    var doneBtn = aEl('button', 'background:#16a34a;color:#fff;border:none;padding:11px 24px;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;font-family:"DM Sans",sans-serif;', 'Mark Job as Completed');
+    doneBtn.addEventListener('click', function() { markJobComplete(ref); });
+    doneWrap.appendChild(doneBtn);
+    panelContent.appendChild(doneWrap);
+  }
+
+  /* Cancellation request review section */
+  if (t.cancelRequest) {
+    var cr = t.cancelRequest;
+    var isPending = cr.status === 'Pending Review';
+    var crBox = aEl('div', 'border:1.5px solid '+(isPending?'#dc2626':'#e5e1dd')+';border-radius:14px;overflow:hidden;margin-bottom:20px;');
+    var crHdr = aEl('div', 'padding:14px 18px;background:'+(isPending?'#fef2f2':'#f7f8fa')+';border-bottom:1px solid '+(isPending?'#fca5a5':'#e5e1dd')+';display:flex;justify-content:space-between;align-items:center;');
+    crHdr.appendChild(aEl('div', 'font-size:13px;font-weight:700;color:'+(isPending?'#dc2626':'#9199a8')+';', isPending ? 'Cancellation Request — Awaiting Review' : 'Cancellation Request — ' + cr.status));
+    crBox.appendChild(crHdr);
+    var crBody = aEl('div', 'padding:16px 18px;');
+    crBody.appendChild(aEl('div', 'font-size:13px;color:#4a5264;margin-bottom:12px;', 'Client reason: ' + cr.reason));
+    if (isPending) {
+      var commentInput = document.createElement('textarea');
+      commentInput.rows = 2; commentInput.id = 'cancel-comment'; commentInput.placeholder = 'Add a note to the client (optional)...';
+      commentInput.style.cssText = 'width:100%;border:1px solid #e5e1dd;border-radius:8px;padding:10px 12px;font-size:13px;font-family:"DM Sans",sans-serif;outline:none;resize:vertical;box-sizing:border-box;margin-bottom:10px;';
+      crBody.appendChild(commentInput);
+      var btnRow = aEl('div', 'display:flex;gap:10px;');
+      var acceptBtn = aEl('button', 'background:#dc2626;color:#fff;border:none;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:"DM Sans",sans-serif;', 'Accept Cancellation');
+      acceptBtn.addEventListener('click', function() { adminResolveCancellation(ref, 'Accepted'); });
+      var rejectBtn = aEl('button', 'background:#f0f1f3;color:#4a5264;border:none;padding:9px 20px;border-radius:8px;font-size:13px;cursor:pointer;font-family:"DM Sans",sans-serif;', 'Decline — Keep Ticket');
+      rejectBtn.addEventListener('click', function() { adminResolveCancellation(ref, 'Rejected'); });
+      btnRow.appendChild(acceptBtn); btnRow.appendChild(rejectBtn);
+      crBody.appendChild(btnRow);
+    } else {
+      crBody.appendChild(aEl('div', 'font-size:12px;color:#9199a8;', 'Admin note: ' + (cr.adminComment || 'None')));
+    }
+    crBox.appendChild(crBody);
+    panelContent.insertBefore(crBox, panelContent.children[1]);
+  }
+
+  /* Cancellation status option */
+  if (!['Cancellation Requested'].includes(t.status)) {
+    var cancOpt = document.createElement('option');
+    cancOpt.value = 'Closed'; cancOpt.textContent = 'Closed';
+    var existingClosed = Array.prototype.find.call(document.getElementById('et-status') ? document.getElementById('et-status').options : [], function(o){ return o.value==='Closed'; });
+    if (!existingClosed && document.getElementById('et-status')) document.getElementById('et-status').appendChild(cancOpt);
+  }
+
   panel.style.display = 'block';
   switchAdminTab('a-tickets');
   setTimeout(function() {
@@ -3231,20 +2579,50 @@ function saveAdminTicket(ref) {
   var c = document.getElementById('et-contractor');
   var sc = document.getElementById('et-scheduled');
   var p = document.getElementById('et-price');
+  var oldStatus = t.status;
   if (s) t.status = s.value;
   if (c) t.contractor = c.value;
   if (sc) t.scheduled = sc.value;
   if (p) t.price = p.value;
+
+  /* Sync status to client portal tickets */
+  if (typeof portalTickets !== 'undefined') {
+    var pt = portalTickets.find(function(x) { return x.ref === ref; });
+    if (pt) {
+      pt.status = t.status;
+      pt.contractor = t.contractor;
+      pt.scheduled = t.scheduled;
+      pt.price = t.price;
+      /* Update progress stage */
+      var stageMap = {'Pending':0,'Assigned':1,'Scheduled':2,'In Progress':3,'Completed':4};
+      if (stageMap[t.status] !== undefined) pt.progress = stageMap[t.status];
+      /* Add system message if status changed */
+      if (oldStatus !== t.status) {
+        var now = new Date();
+        var timeStr = now.getHours() + ':' + String(now.getMinutes()).padStart(2,'0');
+        pt.messages.push({ from:'system', text:'Status updated to: ' + t.status, time: timeStr });
+      }
+    }
+  }
+
   var msg = document.getElementById('ticket-save-msg');
   if (msg) { msg.style.display = 'block'; setTimeout(function() { msg.style.display = 'none'; }, 3000); }
   renderAdminTickets();
   renderAdminPayments();
+  renderAdminOverview();
 }
 
-/* ── PAYMENT STATUS ── */
+
 function setPaymentStatus(ref, paid) {
   var t = adminTickets.find(function(x) { return x.ref === ref; });
-  if (t) { t.paid = paid; openAdminTicket(ref); renderAdminPayments(); }
+  if (t) {
+    t.paid = paid;
+    if (typeof portalTickets !== 'undefined') {
+      var pt = portalTickets.find(function(x){ return x.ref===ref; });
+      if (pt) { pt.payStatus = paid ? 'Paid' : 'Awaiting Payment'; pt.paid = paid; }
+    }
+    openAdminTicket(ref); renderAdminPayments(); renderAdminOverview();
+  }
 }
 
 /* ── POST MESSAGE ── */
@@ -3271,12 +2649,96 @@ function postAdminMsg(ref) {
   }
 }
 
+/* ── ADMIN CONTRACTOR CHAT ── */
+function sendAdminContractorMsg(ref) {
+  var t = adminTickets.find(function(x){ return x.ref===ref; });
+  var inp = document.getElementById('admin-contractor-msg-'+ref);
+  if (!t || !inp) return;
+  var msg = inp.value.trim();
+  if (!msg) return;
+  if (!t.contractorMessages) t.contractorMessages = [];
+  var now = new Date();
+  var ts = now.getHours()+':'+String(now.getMinutes()).padStart(2,'0');
+  t.contractorMessages.push({ from:'admin', text:msg, time:ts, name:'Admin' });
+  inp.value = '';
+  var thread = document.getElementById('admin-contractor-chat-'+ref);
+  if (thread) {
+    var row = aEl('div', 'display:flex;justify-content:flex-end;margin-bottom:8px;');
+    var bubble = aEl('div', 'max-width:72%;background:#1a1a2e;color:#fff;border-radius:12px 12px 4px 12px;padding:9px 13px;font-size:13px;line-height:1.4;');
+    bubble.appendChild(aEl('div','',msg));
+    bubble.appendChild(aEl('div','font-size:11px;color:rgba(255,255,255,0.5);margin-top:4px;','Admin - Just now'));
+    row.appendChild(bubble); thread.appendChild(row);
+    thread.scrollTop = thread.scrollHeight;
+  }
+}
+
+/* ── MARK JOB AS COMPLETE (admin only, syncs to contractor + client) ── */
+function markJobComplete(ref) {
+  var t = adminTickets.find(function(x){ return x.ref===ref; });
+  if (!t) return;
+  t.status = 'Completed';
+  t.progress = 4;
+  var now = new Date();
+  var ts = now.getHours()+':'+String(now.getMinutes()).padStart(2,'0');
+  /* Notify client portal */
+  if (typeof portalTickets !== 'undefined') {
+    var pt = portalTickets.find(function(x){ return x.ref===ref; });
+    if (pt) {
+      pt.status = 'Completed';
+      pt.progress = 4;
+      pt.messages.push({ from:'system', text:'Job marked as completed by Steady Construction.', time:ts });
+      pt.messages.push({ from:'team', text:'Your job is complete. Please review the work and log your payment when ready.', time:ts, name:'Steady Team' });
+    }
+  }
+  /* Add system message to admin chat */
+  t.messages.push({ from:'system', text:'Job marked as completed by admin.', time:ts });
+  /* Re-render */
+  openAdminTicket(ref);
+  renderAdminOverview();
+  renderAdminTickets();
+  renderAdminPayments();
+}
+
+/* ── ADMIN CANCEL RESOLUTION ── */
+function adminResolveCancellation(ref, decision) {
+  var t = adminTickets.find(function(x) { return x.ref === ref; });
+  if (!t || !t.cancelRequest) return;
+  var comment = (document.getElementById('cancel-comment') || {}).value || '';
+  t.cancelRequest.status = decision;
+  t.cancelRequest.adminComment = comment;
+  if (decision === 'Accepted') { t.status = 'Closed'; }
+  else { t.status = 'Pending'; t.cancelRequest = null; }
+  /* Sync to client portal */
+  if (typeof portalTickets !== 'undefined') {
+    var pt = portalTickets.find(function(x){ return x.ref===ref; });
+    if (pt) {
+      pt.cancelRequest = t.cancelRequest;
+      pt.status = t.status;
+      var now = new Date();
+      var ts = now.getHours()+':'+String(now.getMinutes()).padStart(2,'0');
+      pt.messages.push({ from:'system', text: decision==='Accepted' ? 'Cancellation accepted. Ticket closed.' : 'Cancellation declined. Ticket remains open.', time: ts });
+    }
+  }
+  openAdminTicket(ref);
+  renderAdminOverview();
+  renderAdminTickets();
+}
+
 /* ── CLIENTS ── */
 function renderAdminClients() {
   var container = document.getElementById('admin-client-list');
   if (!container) return;
   container.innerHTML = '';
-  adminClients.forEach(function(c, i) {
+  var search = ((document.getElementById('client-email-search')||{}).value||'').toLowerCase().trim();
+  var filtered = adminClients.filter(function(c) {
+    return !search || c.email.toLowerCase().includes(search) || c.name.toLowerCase().includes(search);
+  });
+  if (!filtered.length) {
+    container.appendChild(aEl('div', 'padding:24px;text-align:center;color:#9199a8;font-size:13px;', 'No clients match your search.'));
+    return;
+  }
+  filtered.forEach(function(c, i) {
+    i = adminClients.indexOf(c); /* get real index for toggle */
     var row = aEl('div', 'padding:14px 20px;border-bottom:1px solid #f0f1f3;display:flex;align-items:center;gap:12px;flex-wrap:wrap;');
     var nameCol = aEl('div', 'flex:2;min-width:140px;');
     nameCol.appendChild(aEl('div', 'font-size:14px;font-weight:600;color:#1a1a2e;', c.name));
@@ -3409,6 +2871,395 @@ window.renderAdminPayments = renderAdminPayments;
 
 
 
+
+
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTRACTOR PORTAL — Login Modal + Dashboard
+     ══════════════════════════════════════════════════════════ -->
+
+<!-- CONTRACTOR LOGIN MODAL -->
+<div id="contractor-modal" style="display:none;position:fixed;inset:0;z-index:1002;background:rgba(28,28,28,0.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:20px;padding:48px 40px;width:100%;max-width:420px;margin:20px;box-shadow:0 24px 80px rgba(0,0,0,0.25);position:relative;">
+    <button onclick="closeContractorModal()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:22px;cursor:pointer;color:#9199a8;line-height:1;">&#10005;</button>
+    <div style="text-align:center;margin-bottom:32px;">
+      <div style="width:52px;height:52px;background:linear-gradient(135deg,#1a1a2e,#2d2d4e);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:18px;color:#fff;font-weight:700;">SC</div>
+      <h3 style="font-size:24px;color:#1a1a2e;margin-bottom:6px;font-family:'DM Serif Display',serif;">Contractor Portal</h3>
+      <p style="font-size:14px;color:#9199a8;">Sign in to view your assigned jobs</p>
+    </div>
+    <div id="contractor-login-error" style="display:none;background:#fff3ec;border:1px solid #D4601D;border-radius:10px;padding:12px 16px;margin-bottom:16px;font-size:13px;color:#D4601D;"></div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div>
+        <label style="font-size:13px;font-weight:600;color:#4a5264;display:block;margin-bottom:6px;">Email Address</label>
+        <input id="contractor-email" type="email" placeholder="you@example.ie" style="width:100%;border:1px solid #e5e1dd;border-radius:10px;padding:12px 14px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#f7f8fa;box-sizing:border-box;" onfocus="this.style.borderColor='#D4601D'" onblur="this.style.borderColor='#e5e1dd'">
+      </div>
+      <div>
+        <label style="font-size:13px;font-weight:600;color:#4a5264;display:block;margin-bottom:6px;">Password</label>
+        <input id="contractor-password" type="password" placeholder="••••••••" style="width:100%;border:1px solid #e5e1dd;border-radius:10px;padding:12px 14px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;background:#f7f8fa;box-sizing:border-box;" onfocus="this.style.borderColor='#D4601D'" onblur="this.style.borderColor='#e5e1dd'">
+      </div>
+      <button onclick="doContractorLogin()" style="background:#1a1a2e;color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:4px;">Sign In</button>
+    </div>
+    <p style="text-align:center;margin-top:20px;font-size:13px;color:#9199a8;">Demo: ciaran@example.ie / contractor1234</p>
+  </div>
+</div>
+
+<!-- CONTRACTOR DASHBOARD -->
+<div id="contractor-dashboard" style="display:none;position:fixed;inset:0;z-index:1001;background:#f2f0ee;overflow-y:auto;font-family:'DM Sans',sans-serif;">
+
+  <!-- Top nav -->
+  <div style="background:#1a1a2e;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.2);">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#D4601D,#e87a3a);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;">SC</div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#fff;line-height:1.2;">Steady Construction</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.4);">Contractor Portal</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div style="display:flex;gap:4px;background:rgba(255,255,255,0.08);border-radius:10px;padding:4px;">
+        <button onclick="showContractorView('jobs')" id="cnav-jobs" style="padding:7px 16px;border:none;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;background:#D4601D;color:#fff;font-family:'DM Sans',sans-serif;">My Jobs</button>
+        <button onclick="showContractorView('completed')" id="cnav-completed" style="padding:7px 16px;border:none;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;background:transparent;color:rgba(255,255,255,0.55);font-family:'DM Sans',sans-serif;">Completed</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;cursor:pointer;" onclick="logoutContractor()">
+        <div id="contractor-avatar" style="width:32px;height:32px;background:#D4601D;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;">CO</div>
+        <span style="font-size:13px;color:rgba(255,255,255,0.4);">Sign Out</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jobs view -->
+  <div id="cview-jobs" style="max-width:900px;margin:0 auto;padding:36px 24px;">
+    <div style="margin-bottom:24px;">
+      <h2 id="contractor-welcome" style="font-size:24px;font-family:'DM Serif Display',serif;color:#1a1a2e;margin-bottom:4px;">Your Assigned Jobs</h2>
+      <p style="font-size:14px;color:#9199a8;">Active jobs assigned to you — tap any job for full details and to update the team.</p>
+    </div>
+    <div id="contractor-job-list"></div>
+  </div>
+
+  <!-- Completed view -->
+  <div id="cview-completed" style="display:none;max-width:900px;margin:0 auto;padding:36px 24px;">
+    <h2 style="font-size:24px;font-family:'DM Serif Display',serif;color:#1a1a2e;margin-bottom:20px;">Completed Jobs</h2>
+    <div id="contractor-completed-list"></div>
+  </div>
+
+  <!-- Job detail (shown in overlay within dashboard) -->
+  <div id="cview-job-detail" style="display:none;max-width:900px;margin:0 auto;padding:36px 24px;">
+    <div id="contractor-job-detail-content"></div>
+  </div>
+
+</div>
+
+<script>
+/* ============================================================
+   STEADY CONSTRUCTION — CONTRACTOR PORTAL
+   - See assigned jobs with full address and issue details
+   - Chat with admin on each job
+   - NO cost/price info visible
+   - Admin marks job as done; updates status here
+   ============================================================ */
+
+var contractorAccounts = [
+  { name:'Ciaran OBrien', email:'ciaran@example.ie', password:'contractor1234', trade:'Plumber', initials:'CO' },
+  { name:'Declan Byrne',  email:'declan@example.ie', password:'contractor1234', trade:'Electrician', initials:'DB' },
+  { name:'Padraig Doyle', email:'padraig@example.ie', password:'contractor1234', trade:'Carpenter', initials:'PD' }
+];
+
+var currentContractor = null;
+
+/* ── AUTH ── */
+function openContractorModal() {
+  document.getElementById('contractor-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeContractorModal() {
+  document.getElementById('contractor-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+function doContractorLogin() {
+  var email = (document.getElementById('contractor-email').value || '').trim().toLowerCase();
+  var pass = document.getElementById('contractor-password').value || '';
+  var err = document.getElementById('contractor-login-error');
+  var account = contractorAccounts.find(function(a){ return a.email === email && a.password === pass; });
+  if (account) {
+    currentContractor = account;
+    closeContractorModal();
+    document.getElementById('contractor-dashboard').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    var welcome = document.getElementById('contractor-welcome');
+    if (welcome) welcome.textContent = 'Welcome, ' + account.name.split(' ')[0];
+    var avatar = document.getElementById('contractor-avatar');
+    if (avatar) avatar.textContent = account.initials;
+    showContractorView('jobs');
+  } else {
+    err.style.display = 'block';
+    err.textContent = 'Incorrect credentials. Try ciaran@example.ie / contractor1234';
+  }
+}
+function logoutContractor() {
+  currentContractor = null;
+  document.getElementById('contractor-dashboard').style.display = 'none';
+  document.body.style.overflow = '';
+}
+window.addEventListener('load', function() {
+  var pw = document.getElementById('contractor-password');
+  if (pw) pw.addEventListener('keydown', function(e){ if(e.key==='Enter') doContractorLogin(); });
+});
+
+/* ── NAV ── */
+function showContractorView(view) {
+  ['jobs','completed','job-detail'].forEach(function(v) {
+    var el = document.getElementById('cview-' + v);
+    var btn = document.getElementById('cnav-' + v);
+    if (el) el.style.display = 'none';
+    if (btn) { btn.style.background = 'transparent'; btn.style.color = 'rgba(255,255,255,0.55)'; }
+  });
+  var active = document.getElementById('cview-' + view);
+  var activeBtn = document.getElementById('cnav-' + view);
+  if (active) active.style.display = 'block';
+  if (activeBtn) { activeBtn.style.background = '#D4601D'; activeBtn.style.color = '#fff'; }
+  if (view === 'jobs') renderContractorJobs();
+  if (view === 'completed') renderContractorCompleted();
+}
+
+/* ── HELPERS ── */
+function cEl(tag, css, txt) {
+  var e = document.createElement(tag);
+  if (css) e.style.cssText = css;
+  if (txt !== undefined) e.textContent = String(txt);
+  return e;
+}
+function cPill(text, bg, col) {
+  return cEl('span', 'font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;background:'+bg+';color:'+col+';display:inline-block;white-space:nowrap;', text);
+}
+
+/* ── GET CONTRACTOR'S TICKETS ── */
+function getMyTickets(completedOnly) {
+  if (!currentContractor || typeof adminTickets === 'undefined') return [];
+  return adminTickets.filter(function(t) {
+    var isMyTrade = t.contractor && t.contractor.toLowerCase().includes(currentContractor.trade.toLowerCase());
+    var isMyName  = t.contractor && t.contractor.toLowerCase().includes(currentContractor.name.split(' ')[0].toLowerCase());
+    var isMe = isMyTrade || isMyName;
+    if (completedOnly) return isMe && t.status === 'Completed';
+    return isMe && t.status !== 'Completed' && t.status !== 'Closed';
+  });
+}
+
+/* ── JOB LIST ── */
+function renderContractorJobs() {
+  var container = document.getElementById('contractor-job-list');
+  if (!container) return;
+  container.innerHTML = '';
+  var jobs = getMyTickets(false);
+  if (!jobs.length) {
+    container.appendChild(cEl('div', 'background:#fff;border-radius:14px;padding:40px;text-align:center;color:#9199a8;border:1px solid #e5e1dd;', 'No active jobs assigned to you right now.'));
+    return;
+  }
+  jobs.forEach(function(t) {
+    var stMap = { 'Scheduled':'#eff6ff|#2563eb', 'In Progress':'#fff3ec|#D4601D', 'Assigned':'#f5f3ff|#7c3aed', 'Pending':'#fafafa|#9199a8' };
+    var stParts = (stMap[t.status] || '#fafafa|#9199a8').split('|');
+    var card = cEl('div', 'background:#fff;border-radius:14px;padding:22px 24px;border:1px solid #e5e1dd;margin-bottom:12px;cursor:pointer;');
+    card.addEventListener('mouseover', function(){ card.style.borderColor='#D4601D'; card.style.boxShadow='0 4px 20px rgba(212,96,29,0.08)'; });
+    card.addEventListener('mouseout',  function(){ card.style.borderColor='#e5e1dd'; card.style.boxShadow='none'; });
+    card.addEventListener('click', function(){ openContractorJobDetail(t.ref); });
+
+    var top = cEl('div', 'display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;');
+    var tl = cEl('div', '');
+    var pills = cEl('div', 'display:flex;gap:8px;margin-bottom:6px;flex-wrap:wrap;');
+    pills.appendChild(cEl('span', 'font-size:12px;font-weight:700;color:#9199a8;', t.ref));
+    pills.appendChild(cPill(t.status, stParts[0], stParts[1]));
+    if (t.priority === 'Urgent') pills.appendChild(cPill('URGENT', '#fef2f2', '#dc2626'));
+    tl.appendChild(pills);
+    tl.appendChild(cEl('div', 'font-size:16px;font-weight:700;color:#1a1a2e;margin-bottom:4px;', t.type + ' — ' + t.address));
+    tl.appendChild(cEl('div', 'font-size:13px;color:#9199a8;', t.scheduled ? 'Scheduled: ' + t.scheduled : 'Schedule to be confirmed'));
+    top.appendChild(tl);
+    var arrow = cEl('div', 'font-size:20px;color:#D4601D;font-weight:700;margin-top:4px;', '\u203a');
+    top.appendChild(arrow);
+    card.appendChild(top);
+
+    /* Progress bar */
+    var stageMap = {'Pending':0,'Assigned':1,'Scheduled':2,'In Progress':3,'Completed':4};
+    var prog = stageMap[t.status] || 0;
+    var barWrap = cEl('div', 'background:#f0f1f3;border-radius:4px;height:4px;overflow:hidden;');
+    barWrap.appendChild(cEl('div', 'width:'+Math.round(prog/4*100)+'%;height:100%;background:#D4601D;border-radius:4px;'));
+    card.appendChild(barWrap);
+    container.appendChild(card);
+  });
+}
+
+/* ── COMPLETED JOBS ── */
+function renderContractorCompleted() {
+  var container = document.getElementById('contractor-completed-list');
+  if (!container) return;
+  container.innerHTML = '';
+  var jobs = getMyTickets(true);
+  if (!jobs.length) {
+    container.appendChild(cEl('div', 'background:#fff;border-radius:14px;padding:40px;text-align:center;color:#9199a8;border:1px solid #e5e1dd;', 'No completed jobs yet.'));
+    return;
+  }
+  jobs.forEach(function(t) {
+    var card = cEl('div', 'background:#fff;border-radius:14px;padding:20px 24px;border:1px solid #e5e1dd;margin-bottom:10px;cursor:pointer;');
+    card.addEventListener('mouseover', function(){ card.style.borderColor='#16a34a'; });
+    card.addEventListener('mouseout',  function(){ card.style.borderColor='#e5e1dd'; });
+    card.addEventListener('click', function(){ openContractorJobDetail(t.ref); });
+    var pills = cEl('div', 'display:flex;gap:8px;margin-bottom:6px;');
+    pills.appendChild(cEl('span', 'font-size:11px;font-weight:700;color:#9199a8;', t.ref));
+    pills.appendChild(cPill('Completed', '#f0fdf4', '#16a34a'));
+    card.appendChild(pills);
+    card.appendChild(cEl('div', 'font-size:15px;font-weight:600;color:#1a1a2e;margin-bottom:2px;', t.type + ' — ' + t.address));
+    card.appendChild(cEl('div', 'font-size:13px;color:#9199a8;', 'Completed: ' + t.scheduled));
+    container.appendChild(card);
+  });
+}
+
+/* ── JOB DETAIL ── */
+function openContractorJobDetail(ref) {
+  var t = typeof adminTickets !== 'undefined' ? adminTickets.find(function(x){ return x.ref===ref; }) : null;
+  if (!t) return;
+
+  /* Hide other views, show detail */
+  ['cview-jobs','cview-completed'].forEach(function(id){ var el=document.getElementById(id); if(el) el.style.display='none'; });
+  var detail = document.getElementById('cview-job-detail');
+  if (!detail) return;
+  detail.style.display = 'block';
+
+  var content = document.getElementById('contractor-job-detail-content');
+  if (!content) return;
+  content.innerHTML = '';
+
+  /* Back */
+  var back = cEl('button', 'background:none;border:none;cursor:pointer;font-size:13px;color:#9199a8;margin-bottom:20px;padding:0;font-family:"DM Sans",sans-serif;', '\u2190 Back to Jobs');
+  back.addEventListener('click', function(){
+    detail.style.display = 'none';
+    showContractorView(t.status === 'Completed' ? 'completed' : 'jobs');
+  });
+  content.appendChild(back);
+
+  /* Header */
+  var hdr = cEl('div', 'display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:24px;');
+  var hl = cEl('div', '');
+  hl.appendChild(cEl('div', 'font-size:12px;font-weight:700;color:#9199a8;margin-bottom:4px;', t.ref + ' · ' + t.type));
+  hl.appendChild(cEl('h2', 'font-size:22px;font-family:"DM Serif Display",serif;color:#1a1a2e;margin-bottom:4px;', t.type + ' — ' + t.address));
+  hl.appendChild(cEl('div', 'font-size:13px;color:#9199a8;', t.priority + ' priority'));
+  var stMap2 = {'Completed':'#f0fdf4|#16a34a','In Progress':'#fff3ec|#D4601D','Scheduled':'#eff6ff|#2563eb'};
+  var sp = (stMap2[t.status]||'#fafafa|#9199a8').split('|');
+  hdr.appendChild(hl);
+  hdr.appendChild(cPill(t.status, sp[0], sp[1]));
+  content.appendChild(hdr);
+
+  /* Job details grid — NO price/cost info */
+  var grid = cEl('div', 'display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px;');
+  var details = [
+    ['Full Address', t.address],
+    ['Service Type', t.type],
+    ['Scheduled', t.scheduled || 'To be confirmed'],
+    ['Priority', t.priority],
+    ['Occupancy', t.occupancy || 'Not specified'],
+    ['Access Instructions', t.accessInstructions || 'See notes below']
+  ];
+  details.forEach(function(d) {
+    var cell = cEl('div', 'background:#fff;border-radius:12px;padding:14px 16px;border:1px solid #e5e1dd;');
+    cell.appendChild(cEl('div', 'font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9199a8;margin-bottom:4px;', d[0]));
+    cell.appendChild(cEl('div', 'font-size:13px;font-weight:600;color:#1a1a2e;line-height:1.4;', d[1]));
+    grid.appendChild(cell);
+  });
+  content.appendChild(grid);
+
+  /* Issue description */
+  var descBox = cEl('div', 'background:#fff;border-radius:14px;padding:20px 24px;border:1px solid #e5e1dd;margin-bottom:24px;');
+  descBox.appendChild(cEl('div', 'font-size:13px;font-weight:700;color:#1a1a2e;margin-bottom:8px;', 'Issue Description'));
+  descBox.appendChild(cEl('div', 'font-size:13px;color:#4a5264;line-height:1.6;', t.desc));
+  content.appendChild(descBox);
+
+  /* Chat with admin — contractor side */
+  var chatBox = cEl('div', 'background:#fff;border-radius:14px;border:1px solid #e5e1dd;overflow:hidden;margin-bottom:24px;');
+  var chatHdr = cEl('div', 'padding:16px 20px;border-bottom:1px solid #f0f1f3;');
+  chatHdr.appendChild(cEl('div', 'font-size:14px;font-weight:700;color:#1a1a2e;', 'Chat with Steady Construction'));
+  chatHdr.appendChild(cEl('div', 'font-size:12px;color:#9199a8;margin-top:2px;', 'Send updates, photos and questions to the team'));
+  chatBox.appendChild(chatHdr);
+
+  var thread = cEl('div', 'padding:16px 20px;background:#f7f8fa;min-height:80px;max-height:300px;overflow-y:auto;');
+  thread.id = 'contractor-chat-' + ref;
+
+  /* Show admin<->contractor messages from contractorMessages array on ticket */
+  var cMsgs = t.contractorMessages || [];
+  if (!cMsgs.length) {
+    thread.appendChild(cEl('div', 'text-align:center;color:#9199a8;font-size:13px;padding:20px 0;', 'No messages yet. Send an update to the team.'));
+  } else {
+    cMsgs.forEach(function(m) {
+      var isMe = m.from === 'contractor';
+      var row = cEl('div', 'display:flex;'+(isMe?'justify-content:flex-end;':'')+'margin-bottom:10px;');
+      var bubble = cEl('div', 'max-width:72%;background:'+(isMe?'#1a1a2e':'#fff')+';color:'+(isMe?'#fff':'#1a1a2e')+';border-radius:'+(isMe?'14px 14px 4px 14px':'14px 14px 14px 4px')+';padding:10px 14px;font-size:13px;line-height:1.5;border:'+(isMe?'none':'1px solid #e5e1dd')+';');
+      bubble.appendChild(cEl('div', '', m.text));
+      bubble.appendChild(cEl('div', 'font-size:11px;'+(isMe?'color:rgba(255,255,255,0.5)':'color:#9199a8')+';margin-top:5px;', (m.name||m.from)+' - '+m.time));
+      row.appendChild(bubble); thread.appendChild(row);
+    });
+  }
+  chatBox.appendChild(thread);
+
+  var chatFoot = cEl('div', 'padding:14px 16px;border-top:1px solid #f0f1f3;background:#fff;display:flex;gap:10px;');
+  var msgInput = document.createElement('input');
+  msgInput.type = 'text'; msgInput.id = 'contractor-msg-input-'+ref;
+  msgInput.placeholder = 'Send an update to the team...';
+  msgInput.style.cssText = 'flex:1;border:1px solid #e5e1dd;border-radius:8px;padding:10px 14px;font-size:13px;font-family:"DM Sans",sans-serif;outline:none;';
+  msgInput.addEventListener('focus', function(){ msgInput.style.borderColor='#D4601D'; });
+  msgInput.addEventListener('blur',  function(){ msgInput.style.borderColor='#e5e1dd'; });
+  msgInput.addEventListener('keydown', function(e){ if(e.key==='Enter') sendContractorMsg(ref); });
+  var sendBtn = cEl('button', 'background:#1a1a2e;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:"DM Sans",sans-serif;white-space:nowrap;', 'Send');
+  sendBtn.addEventListener('click', function(){ sendContractorMsg(ref); });
+  chatFoot.appendChild(msgInput); chatFoot.appendChild(sendBtn);
+  chatBox.appendChild(chatFoot);
+  content.appendChild(chatBox);
+
+  /* Completed notice — no mark-as-done button (admin only) */
+  if (t.status === 'Completed') {
+    var doneBox = cEl('div', 'background:#f0fdf4;border:1.5px solid #16a34a;border-radius:14px;padding:18px 20px;text-align:center;');
+    doneBox.appendChild(cEl('div', 'font-size:14px;font-weight:700;color:#16a34a;margin-bottom:4px;', 'Job Marked as Completed'));
+    doneBox.appendChild(cEl('div', 'font-size:13px;color:#9199a8;', 'This job has been signed off by the Steady Construction team.'));
+    content.appendChild(doneBox);
+  }
+
+  setTimeout(function(){ thread.scrollTop = thread.scrollHeight; }, 50);
+}
+
+/* ── CONTRACTOR CHAT ── */
+function sendContractorMsg(ref) {
+  if (!currentContractor) return;
+  var t = typeof adminTickets !== 'undefined' ? adminTickets.find(function(x){ return x.ref===ref; }) : null;
+  if (!t) return;
+  var inp = document.getElementById('contractor-msg-input-' + ref);
+  if (!inp) return;
+  var msg = inp.value.trim();
+  if (!msg) return;
+  if (!t.contractorMessages) t.contractorMessages = [];
+  var now = new Date();
+  var ts = now.getHours()+':'+String(now.getMinutes()).padStart(2,'0');
+  var msgObj = { from:'contractor', text:msg, time:ts, name: currentContractor.name };
+  t.contractorMessages.push(msgObj);
+  inp.value = '';
+
+  var thread = document.getElementById('contractor-chat-' + ref);
+  if (thread) {
+    var row = cEl('div', 'display:flex;justify-content:flex-end;margin-bottom:10px;');
+    var bubble = cEl('div', 'max-width:72%;background:#1a1a2e;color:#fff;border-radius:14px 14px 4px 14px;padding:10px 14px;font-size:13px;line-height:1.5;');
+    bubble.appendChild(cEl('div', '', msg));
+    bubble.appendChild(cEl('div', 'font-size:11px;color:rgba(255,255,255,0.5);margin-top:5px;', currentContractor.name + ' - Just now'));
+    row.appendChild(bubble); thread.appendChild(row);
+    thread.scrollTop = thread.scrollHeight;
+    /* Remove empty placeholder */
+    var placeholder = thread.querySelector('[data-empty]');
+    if (placeholder) thread.removeChild(placeholder);
+  }
+}
+
+/* ── EXPOSE GLOBALS ── */
+window.openContractorModal = openContractorModal;
+window.closeContractorModal = closeContractorModal;
+window.doContractorLogin = doContractorLogin;
+window.logoutContractor = logoutContractor;
+window.showContractorView = showContractorView;
+window.openContractorJobDetail = openContractorJobDetail;
+window.sendContractorMsg = sendContractorMsg;
+</script>
 
 </body>
 </html>
