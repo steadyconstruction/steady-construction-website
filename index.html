@@ -800,14 +800,14 @@
   <div class="footer-bottom">
     <span>© 2026 Steady Construction. All rights reserved.</span>
     <span style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;">
-      <span>Steady Construction is a trading name of Steady Yield, both registered business names of <strong>JMAFG Limited</strong>. Fully Registered &amp; Insured in Ireland. Registered address: 20 Harcourt Street, Dublin 2, D02 H364.</span>
+      <span>Steady Construction of Steady Yield. Trading under JMAFG Limited. Fully Registered address: 20 Harcourt Street, Dublin 2, D02 H364.</span>
     </span>
     <span style="display:flex;align-items:center;gap:10px;">
       <a href="javascript:void(0)" onclick="openPortal()" style="font-size:13px;color:var(--gray-400);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4601D'" onmouseout="this.style.color='var(--gray-400)'">Client Login</a>
       <span style="color:var(--gray-200);">·</span>
       <a href="javascript:void(0)" onclick="window.openAdminModal()" style="font-size:13px;color:var(--gray-200);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4601D'" onmouseout="this.style.color='var(--gray-200)'">Admin</a>
       <span style="color:var(--gray-200);">·</span>
-      <a href="javascript:void(0)" onclick="openContractorModal()" style="font-size:13px;color:var(--gray-200);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#D4601D'" onmouseout="this.style.color='var(--gray-200)'">Contractor Login</a>
+      <a href="javascript:void(0)" id="contractor-login-btn" style="font-size:13px;color:var(--gray-200);text-decoration:none;transition:color 0.2s;">Contractor Login</a>
     </span>
   </div>
 
@@ -3265,6 +3265,60 @@ window.addEventListener('load', function() {
   var pw = document.getElementById('contractor-password');
   if (pw) pw.addEventListener('keydown', function(e){ if(e.key==='Enter') doContractorLogin(); });
 });
+</script>
+
+<script>
+(function() {
+  function showContractorLogin() {
+    var m = document.getElementById('contractor-modal');
+    if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+  }
+  function hideContractorLogin() {
+    var m = document.getElementById('contractor-modal');
+    if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
+  }
+  window.openContractorModal = showContractorLogin;
+  window.closeContractorModal = hideContractorLogin;
+  window.doContractorLogin = function() {
+    var email = (document.getElementById('contractor-email') || {}).value || '';
+    var pass  = (document.getElementById('contractor-password') || {}).value || '';
+    var accounts = [
+      { name:'Ciaran OBrien', email:'ciaran@example.ie', password:'contractor1234', trade:'Plumber', initials:'CO' },
+      { name:'Declan Byrne',  email:'declan@example.ie', password:'contractor1234', trade:'Electrician', initials:'DB' },
+      { name:'Padraig Doyle', email:'padraig@example.ie', password:'contractor1234', trade:'Carpenter', initials:'PD' }
+    ];
+    var account = accounts.find(function(a){ return a.email === email.trim().toLowerCase() && a.password === pass; });
+    var err = document.getElementById('contractor-login-error');
+    if (account) {
+      if (typeof currentContractor !== 'undefined') currentContractor = account;
+      window._currentContractor = account;
+      hideContractorLogin();
+      var dash = document.getElementById('contractor-dashboard');
+      if (dash) dash.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      var welcome = document.getElementById('contractor-welcome');
+      if (welcome) welcome.textContent = 'Welcome, ' + account.name.split(' ')[0];
+      var avatar = document.getElementById('contractor-avatar');
+      if (avatar) avatar.textContent = account.initials;
+      if (typeof showContractorView === 'function') showContractorView('jobs');
+    } else {
+      if (err) { err.style.display = 'block'; err.textContent = 'Incorrect credentials. Try ciaran@example.ie / contractor1234'; }
+    }
+  };
+  // Wire up the button after DOM loads
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('contractor-login-btn');
+    if (btn) {
+      btn.addEventListener('click', showContractorLogin);
+      btn.addEventListener('mouseover', function(){ btn.style.color = '#D4601D'; });
+      btn.addEventListener('mouseout', function(){ btn.style.color = 'var(--gray-200)'; });
+    }
+    var pw = document.getElementById('contractor-password');
+    if (pw) pw.addEventListener('keydown', function(e){ if(e.key==='Enter') window.doContractorLogin(); });
+    var closeBtn = document.querySelector('#contractor-modal button');
+    if (closeBtn) closeBtn.addEventListener('click', hideContractorLogin);
+  });
+})();
 </script>
 </body>
 </html>
