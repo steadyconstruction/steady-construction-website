@@ -982,7 +982,7 @@ function supabaseCreateTicket(ticketData) {
         <p class="section-lead">Whether it's a quick repair, a full renovation, or an ongoing contract — our team is ready to help. Get in touch for a consultation and quote.</p>
         <div class="contact-detail"><div class="contact-detail-icon">📍</div> All across Dublin — serving all Dublin postcodes</div>
         <div class="contact-detail"><div class="contact-detail-icon">🕐</div> Available Monday – Friday, 9:00 AM – 6:00 PM</div>
-        <div class="contact-detail"><div class="contact-detail-icon">✉️</div> <span style="color:inherit;text-decoration:none;">office@steadyconstruction.ie</span></div>
+        <div class="contact-detail"><div class="contact-detail-icon">✉️</div> <span style="color:inherit;text-decoration:none;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="553a33333c36301526213034312c363a3b2621272036213c3a3b7b3c30">[email&#160;protected]</a></span></div>
 
       </div>
       <div class="contact-form" style="display:flex;flex-direction:column;justify-content:center;">
@@ -991,7 +991,7 @@ function supabaseCreateTicket(ticketData) {
         <div style="width:100%;border-radius:14px;overflow:hidden;min-height:500px;">
           <iframe data-tally-src="https://tally.so/embed/eqElbE?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Steady Construction — Request a Quote" style="border:none;display:block;"></iframe>
         </div>
-        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
       </div>
     </div>
   </div>
@@ -1029,7 +1029,7 @@ function supabaseCreateTicket(ticketData) {
       <ul>
         <li style="font-size:13px;color:var(--gray-400);line-height:1.6;">20 Harcourt Street<br>Dublin 2, D02 H364<br>Ireland</li>
         <li style="margin-top:10px;"><a href="tel:+353000000000">+353 1 XXX XXXX</a></li>
-        <li><span style="color:inherit;text-decoration:none;">office@steadyconstruction.ie</span></li>
+        <li><span style="color:inherit;text-decoration:none;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe919898979d9bbe8d8a9b9f9a879d91908d8a8c8b9d8a979190d0979b">[email&#160;protected]</a></span></li>
         <li style="margin-top:10px;font-size:13px;color:var(--gray-400);">Service Area: All across Dublin</li>
       </ul>
     </div>
@@ -1238,7 +1238,7 @@ function supabaseCreateTicket(ticketData) {
 
 </div><!-- end portal-dashboard -->
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ============================================================
    STEADY CONSTRUCTION — CLIENT PORTAL
    Zero innerHTML string building with onclick.
@@ -2112,7 +2112,7 @@ window.submitNewRequest = submitNewRequest;
       </div>
       <button onclick="window.doAdminLogin()" style="background:#D4601D;color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;margin-top:4px;transition:background 0.2s;" onmouseover="this.style.background='#e87a3a'" onmouseout="this.style.background='#D4601D'">Sign In →</button>
     </div>
-    <p style="text-align:center;margin-top:20px;font-size:13px;color:rgba(255,255,255,0.25);">Demo: admin@steadyconstruction.ie / admin1234</p>
+    <p style="text-align:center;margin-top:20px;font-size:13px;color:rgba(255,255,255,0.25);">Demo: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f293969f9b9cb281869793968b919d9c8186808791869b9d9cdc9b97">[email&#160;protected]</a> / admin1234</p>
   </div>
 </div>
 
@@ -2335,7 +2335,7 @@ window.submitNewRequest = submitNewRequest;
 
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ============================================================
    STEADY CONSTRUCTION — ADMIN CRM
    100% DOM-based. Zero innerHTML string building.
@@ -2431,12 +2431,16 @@ function doAdminLogin() {
 
   supaSignIn(e.trim(), p).then(function(result) {
     if (result.error) {
-      if (err) { err.style.display='block'; err.textContent='Invalid credentials. Please check your details.'; }
+      if (err) { err.style.display='block'; err.textContent='Login failed: ' + (result.error.message || 'Unknown error'); }
       return;
     }
     supaGetRole(e.trim()).then(function(userData) {
-      if (!userData || userData.role !== 'admin') {
-        if (err) { err.style.display='block'; err.textContent='Access denied. Admin accounts only.'; }
+      if (!userData) {
+        if (err) { err.style.display='block'; err.textContent='Auth OK but no user record found in users table. Check Supabase.'; }
+        supaSignOut(); return;
+      }
+      if (userData.role !== 'admin') {
+        if (err) { err.style.display='block'; err.textContent='Found user but role is: ' + userData.role + ' (need admin)'; }
         supaSignOut(); return;
       }
       window._adminUser = userData;
@@ -3135,29 +3139,4 @@ function renderAdminPayments() {
 /* ── EXPOSE GLOBALS ── */
 window.openAdminModal = openAdminModal;
 window.closeAdminModal = closeAdminModal;
-window.doAdminLogin = doAdminLogin;
-window.logoutAdmin = logoutAdmin;
-window.switchAdminTab = switchAdminTab;
-window.renderAdminTickets = renderAdminTickets;
-window.openAdminTicket = openAdminTicket;
-window.renderAdminClients = renderAdminClients;
-window.openNewClientForm = openNewClientForm;
-window.createClient = createClient;
-window.toggleClient = toggleClient;
-window.sendReset = sendReset;
-window.renderContractorCards = renderContractorCards;
-window.openNewContractorForm = openNewContractorForm;
-window.addContractor = addContractor;
-window.renderAdminPayments = renderAdminPayments;
-window.renderAdminOverview = renderAdminOverview;
-window.postContractorMsg = postContractorMsg;
-</script>
-
-
-
-
-
-
-
-</body>
-</html>
+wind
